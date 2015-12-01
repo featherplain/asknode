@@ -12,8 +12,8 @@
 @import 'core/default';
 
 // uncomment these belows if you use Foundation.
-// @import 'core/settings';
-// @import 'core/foundation';
+@import 'core/settings';
+@import 'core/foundation';
 
 // module
 @import 'module/*.*';
