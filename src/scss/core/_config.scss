@@ -3,47 +3,67 @@
 //----------------------------------------------------------------------------
 // Color
 //----------------------------------------------------------------------------
-// primary
-$colorBase          : #333333;
-$colorSub           : #555555;
-$colorLink          : #24279f;
+// theme colors
+$colorPink          : #df0067;
+$colorPinkDarken    : #910044;
+$colorPinkLighten   : #ff7db9;
+$colorBlue          : #008d93;
+$colorBlueLighten   : #50e3c2;
+$colorOrange        : #f58300;
+$colorBrown         : #934ff0;
+$colorGreen         : #449300;
+$colorGreeenLighten : #67df00;
+$colorBlack         : #222;
+$colorBg            : #f1f1f1;
+$colorBorder        : #dedede;
+
+// text colors
+$colorText          : $colorBlack;
+$colorSub           : #555;
+$colorLink          : $colorPink;
 $colorLinkHover     : lighten($colorLink, 15%);
-$colorSelection     : $colorLink;
+$colorSelection     : $colorLinkHover;
+
+// sns
+$colorFb            : #3b5598; // Facebook
+$colorHa            : #0071c5; // Hatena Bookmark
+$colorTw            : #55acee; // Twitter
+$colorPo            : #ef4056; // Pocket
 
 //----------------------------------------------------------------------------
-// Path
+// Image file path
 //----------------------------------------------------------------------------
-$filePath           : "../images/";
+$imgPath           : "../images/";
 
 //----------------------------------------------------------------------------
-// Typography
+// Fonts
 //----------------------------------------------------------------------------
-// primary
-$fontFamily         : "Helvetica Neue", "Helvetica", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック","MS PGothic",Arial,Sans-Serif;
-// En
-$fontFamilyEn       : "Helvetica Neue", "Helvetica",Sans-Serif;
-// code
-$fontFamilyCode     : Menlo,Consolas,Courier,sans-serif;
+// primary font
+$fontFamily         : "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック","MS PGothic",Arial,Sans-Serif;
+// latin font
+$fontFamilyEn       : "DIN Alternate", "Abel", "Helvetica", "Arial", Sans-Serif;
+// code font
+$fontFamilyCode     : Menlo, Consolas, Courier, sans-serif;
 
 //----------------------------------------------------------------------------
 // Styles
 //----------------------------------------------------------------------------
-$baseRadius: 4px;
+$baseRadius         : 4px;
 
 //----------------------------------------------------------------------------
-// Block size
+// Grid
 //----------------------------------------------------------------------------
 // $containerWidth: ;
-$maxWidth           : 1200px;
+$maxWidth           : 1080px;
 
 //----------------------------------------------------------------------------
 // Navigation size
 //----------------------------------------------------------------------------
-// $headerHeight      : ;
-// $menuHeight        : $headerHeight;
+$headerHeight      : 52px;
+$menuHeight        : $headerHeight;
 // $menuItemWidth     : ;
-// $menuItemHeight    : ;
-// $menuPadding       : ($menuHeight - $menuItemHeight) / 2; // Calclate padding size automatically
+$menuItemHeight    : 20px;
+$menuPadding       : ($menuHeight - $menuItemHeight) / 2; // Calclate padding size automatically
 
 //----------------------------------------------------------------------------
 // WordPress
