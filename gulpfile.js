@@ -128,6 +128,7 @@ gulp.task('jade', function() {
 
 gulp.task('jsLib', function() {
   return gulp.src(paths.jsPath + 'lib/*.js')
+    // .pipe($.plumber())
     .pipe($.concat('lib.js'))
     .pipe($.uglify())
     .pipe($.rename({ suffix: '.min' }))
@@ -137,6 +138,7 @@ gulp.task('jsLib', function() {
 
 gulp.task('jsApp', function() {
   return gulp.src(paths.jsPath + 'app/*.js')
+    // .pipe($.plumber())
     .pipe($.concat('script.js'))
     .pipe($.uglify())
     .pipe($.rename({ suffix: '.min' }))

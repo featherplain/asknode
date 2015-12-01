@@ -59,11 +59,11 @@ $maxWidth           : 1080px;
 //----------------------------------------------------------------------------
 // Navigation size
 //----------------------------------------------------------------------------
-$headerHeight      : 52px;
+$headerHeight      : 60px;
 $menuHeight        : $headerHeight;
 // $menuItemWidth     : ;
 $menuItemHeight    : 20px;
-$menuPadding       : ($menuHeight - $menuItemHeight) / 2; // Calclate padding size automatically
+$menuPadding       : 22px; // Calclate padding size automatically
 
 //----------------------------------------------------------------------------
 // WordPress
