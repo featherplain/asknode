@@ -1,0 +1,58 @@
+include inc/core/_config
+include inc/core/_mixins
+extends inc/core/_base
+block title
+  title= page.top.title
+block prepend meta
+  - var sitename = name
+  - var keywords = page.top.keywords
+  - var description = page.top.description
+  - var ogpimage = page.top.ogpimage
+  - var bodyClass = 'home'
+block append meta
+block body
+  .l-container
+    include inc/layout/_l-header
+    .mainImg
+      .mainImg__inner
+        h1.mainImg__title ASKNODE
+        p.mainImg__description 東京、埼玉を拠点に活動するフリーランスのデザイナー
+    .topService
+      .row
+        h2.topService__title SERVICE
+        ul.listService
+          - for (var x = 0; x < 4; x++)
+            li.listService__item
+              article.service
+                img(src="http://placehold.jp/240x145.png" alt="")
+                .service__inner
+                  h3.service__title デザイン
+                  p.service__excerpt 目的達成に必要な設計やページ構成から検討します。協業によるPhotoshop 等でのデザインカンプ制作のみも承ります。
+                  a.btnMore(href="#") &gt;&gt; くわしく
+    .topWorks
+      .row
+        h2.topWorks__title
+          span.topWorks__title__inner WORKS
+          a(href="#") &gt;&gt; すべて見る
+        .featuredWork
+          .featuredWork__img
+            img(src="/assets/images/img_amethyst.png" alt="")
+          .featuredWork__content
+            h3.featuredWork__title
+              span.featuredWork__title__inner Amethyst
+              a(href="#") &gt;&gt; くわしく
+            p.featuredWork__excerpt WordPress のオリジナルテーマです。ここに紹介文が入ります。ここに紹介文が入ります。WordPress のオリジナルテーマです。ここに紹介文が入ります。ここに紹介文が入ります。
+            a.btnExternal(href="http://amethyst.asknode.net/" target="_blank") デモサイトをみる
+      .row
+        ul.listWorks
+          - for (var x = 0; x < 6; x++)
+            li.listWorks__item
+              a.listWorks__link(href="#")
+                article.work
+                  img(src="/assets/images/thumb_sample-works.jpg" alt="")
+                  h3.work__title WordCamp Tokyo 2015 公式サイト
+
+
+
+    include inc/layout/_l-footer
+block append scriptFooter
