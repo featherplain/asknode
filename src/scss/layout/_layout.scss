@@ -21,6 +21,12 @@
   @include grid-row();
   // box-sizing: border-box;
   @media #{$small-only} {
-    padding: 0 10px;
+    padding: 0 14px;
   }
+}
+/**
+ * screeen reader text
+ */
+.readerOnly {
+  display: none;
 }

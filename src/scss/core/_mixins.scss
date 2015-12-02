@@ -144,7 +144,6 @@ $buttonRadius: $baseRadius;
 @mixin btnBase() {
   display: inline-block;
   margin: 1rem 0;
-  padding: 0.875rem 0 0.9375rem 0;
   text-align: center;
   &:focus {
     outline: 0;
@@ -157,12 +156,13 @@ $buttonRadius: $baseRadius;
   }
 }
 
-@mixin btn($colorBg, $color, $fontSize, $fullWidth: false, $boxShadow: false, $radius: false) {
+@mixin btn($colorBg, $color, $fontSize,  $padding, $fullWidth: false, $boxShadow: false, $radius: false) {
   @include btnBase;
   background-color: $colorBg;
   color: $color;
   font-size: $fontSize;
   transition: background-color 300ms ease-out;
+  padding: $padding;
   // set $fullWidth
   @if $fullWidth {
     width: 100%;
@@ -187,13 +187,14 @@ $buttonRadius: $baseRadius;
   }
 }
 
-@mixin btnGhost($color, $colorHover, $fontSize, $fullWidth: false, $radius: false) {
+@mixin btnGhost($color, $colorHover, $fontSize, $padding, $fullWidth: false, $radius: false) {
   @include btnBase;
   background-color: transparent;
-  border: 2px solid $color;
+  border: 1px solid $color;
   color: $color;
   font-size: $fontSize;
   transition: 0.3s;
+  padding: $padding;
   // set $fullWidth
   @if $fullWidth {
     width: 100%;
@@ -221,8 +222,9 @@ $buttonRadius: $baseRadius;
 @mixin styleTitle($color, $colorShadow) {
   color: $color;
   font-family: $fontFamilyEn;
-  font-size: rem-calc(28);
+  font-size: rem-calc(32);
   line-height: 1;
+  letter-spacing: 1.4px;
   text-align: center;
   text-shadow: 1px 1px 0 $colorShadow;
   -webkit-font-smoothing: antialiased;
