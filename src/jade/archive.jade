@@ -1,0 +1,29 @@
+include inc/core/_config
+include inc/core/_mixins
+extends inc/core/_base
+block title
+  title= page.top.title
+block prepend meta
+  - var sitename = name
+  - var keywords = page.top.keywords
+  - var description = page.top.description
+  - var ogpimage = page.top.ogpimage
+  - var bodyClass = ''
+block append meta
+block body
+  .l-container
+    include inc/layout/_l-header
+    .l-main
+      .worksArchive
+        h2.worksArchive__title WORKS
+        .row
+          ul.listWorks
+            - for (var x = 0; x < 9; x++)
+              li.listWorks__item
+                a.listWorks__link(href="#")
+                  article.work
+                    img(src="/assets/images/thumb_sample-works.jpg" alt="")
+                    h3.work__title WordCamp Tokyo 2015 公式サイト
+      include inc/module/_m-pagenav
+    include inc/layout/_l-footer
+block append scriptFooter

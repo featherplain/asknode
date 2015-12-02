@@ -216,8 +216,11 @@ $buttonRadius: $baseRadius;
 }
 
 //----------------------------------------------------------------------------
-// styles
+// common styles
 //----------------------------------------------------------------------------
+@mixin bgTriangle() {
+  background: url($imgPath + "img_triangle.svg") right top no-repeat $colorPink;
+}
 
 @mixin styleTitle($color, $colorShadow) {
   color: $color;

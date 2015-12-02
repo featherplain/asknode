@@ -4,7 +4,7 @@
 /* layout
 /* -------------------------------------------------------------- */
 .l-container {
-  background-color: $colorBg;
+  background-color: $colorPink;
 }
 .l-header {
   @extend %baseWidth;
@@ -12,8 +12,8 @@
 .l-footer {}
 .l-main {
   @extend %baseWidth;
-  background-color: $colorBg;
-  height: 200px;
+  margin-top: 56px;
+  margin-bottom: 60px;
 }
 .l-primary {}
 .l-sidebar {}
