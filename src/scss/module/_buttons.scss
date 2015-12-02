@@ -4,26 +4,47 @@
 /* buttons
 /* -------------------------------------------------------------- */
 
-.btn {
+// .btn {
+//   @include btn(
+//     $colorBg: #0099cc,
+//     $color: #ffffff,
+//     $fontSize: 16px
+//   );
+// }
+// .btnFull {
+//   @include btn(
+//     $colorBg: #0099cc,
+//     $color: #ffffff,
+//     $fontSize: 16px,
+//     $fullWidth: true
+//   );
+// }
+// .btnGhost {
+//   @include btnGhost(
+//     $color: #555555,
+//     $colorHover: #ffffff,
+//     $fontSize: 16px,
+//     $radius: true
+//   );
+// }
+
+/**
+ * button contact
+ */
+.btnContact {
   @include btn(
-    $colorBg: #0099cc,
+    $colorBg: $colorPink,
     $color: #ffffff,
-    $fontSize: 16px
-  );
-}
-.btnFull {
-  @include btn(
-    $colorBg: #0099cc,
-    $color: #ffffff,
-    $fontSize: 16px,
+    $fontSize: rem-calc(16),
+    $radius: true,
+    $boxShadow: true,
     $fullWidth: true
   );
-}
-.btnGhost {
-  @include btnGhost(
-    $color: #555555,
-    $colorHover: #ffffff,
-    $fontSize: 16px,
-    $radius: true
-  );
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  &:before {
+    @include fa($content: '\f1d8', $fontsize: 16px, $valaign: baseline);
+    margin-right: 10px;
+  }
 }

@@ -1,2 +1,25 @@
 footer.l-footer
-	p &copy; project-starter
+  .contact
+    .contact__inner
+      h2.contact__title CONTACT
+      p.contact__text 制作のご依頼、記事に関するご意見等はこちらから
+      a.btnContact(href="/contact" role="button") お問い合わせフォーム
+  .insta
+    .row
+      h2.insta__title INSTAGRAM@FAETHERPLAIN
+      .instaPhotos
+        ul.instaPhotos__list
+          - for (var x = 0; x < 5; x++)
+            li.instaPhotos__item
+              a(href="#")
+                img(src="http://placehold.jp/200x200.png", alt="")
+  .siteinfo
+    .row
+      p.siteinfo__text.siteinfo__text--credit
+        span Proudy powerd by <a href="https://ja.wordpress.org/" target="_blank">WordPress</a>
+        i
+          svg(viewBox="0 0 4 4" role="img" rea-labelledby="title desc" width="4px" height="4px")
+            use(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/images/sprite.symbol.svg#icon_circle")
+        span Theme by <a href="http://asknode.net/">ASKNODE</a>
+      p.siteinfo__text.siteinfo__text--copy (C) 2015 ASKNODE
+
