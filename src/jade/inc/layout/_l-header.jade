@@ -1,29 +1,30 @@
 header.l-header(role='banner')
-  .l-header__inner
-    h1.sitetitle
-      a(href="#")
-        svg(viewBox="0 0 104 19" role="img" area-labelledby="title desc" width="104px" height="20px")
-          use(xlink:href="/assets/images/sprite.symbol.svg#logo_asknode")
-    nav.gNav
-      ul.gMenu
-        li.gMenu__item: a(href="#") ABOUT
-        li.gMenu__item.gMenu__item--hasChild
-          a(href="http://asknode.net/") SERVICE
-          ul.subMenu
-            li: a(href="#") DESIGN
-            li: a(href="#") CODING
-            li: a(href="#") WordPress
-            li: a(href="#") WRITING
-        li.gMenu__item: a(href="#") WORKS
-        li.gMenu__item: a(href="#") CONTACT
-        li.gMenu__item: a(href="#") BLOG
-      ul.socialMenu
-        li.socialMenu__item
-          a(href="https://facebook.com/megumi.hano/" target="_blank")
-            svg(viewBox="0 0 16 17" role="img" area-labelledby="title desc" width="20px" height="21px")
-              use(xlink:href="/assets/images/sprite.symbol.svg#icon_fb")
-        li.socialMenu__item
-          a(href="https://github.com/featherplain/" target="_blank")
-            svg(viewBox="0 0 17 17" role="img" area-labelledby="title desc" width="20px" height="20px")
-              use(xlink:href="/assets/images/sprite.symbol.svg#icon_gh")
+  h1.sitetitle
+    a(href="#")
+      svg(viewBox="0 0 104 19" role="img" area-labelledby="title desc" width="104px" height="20px")
+        use(xlink:href="/assets/images/sprite.symbol.svg#logo_asknode")
+  a.btnMenuTrigger(href="#")
+  nav.gNav#gNav
+    ul.gMenu
+      li.gMenu__item: a(href="#") ABOUT
+      li.gMenu__item.gMenu__item--has-child
+        a(href="http://asknode.net/") SERVICE
+        ul.subMenu.js-dropdown
+          li: a(href="#") DESIGN
+          li: a(href="#") CODING
+          li: a(href="#") WordPress
+          li: a(href="#") WRITING
+      li.gMenu__item: a(href="#") WORKS
+      li.gMenu__item: a(href="#") CONTACT
+      li.gMenu__item: a(href="#") BLOG
+      li.gMenu__item
+        ul.socialMenu
+          li.socialMenu__item
+            a(href="https://facebook.com/megumi.hano/" target="_blank")
+              svg(viewBox="0 0 16 17" role="img" area-labelledby="title desc" width="20px" height="21px")
+                use(xlink:href="/assets/images/sprite.symbol.svg#icon_fb")
+          li.socialMenu__item
+            a(href="https://github.com/featherplain/" target="_blank")
+              svg(viewBox="0 0 17 17" role="img" area-labelledby="title desc" width="20px" height="20px")
+                use(xlink:href="/assets/images/sprite.symbol.svg#icon_gh")
 

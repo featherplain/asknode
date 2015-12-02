@@ -1,5 +1,5 @@
 (function($) {
-  $(function() {
+  $(document).ready(function(){
     // *************************************************
     // Initialize Foundation
     // *************************************************
@@ -13,24 +13,24 @@
     var mobileNav = {
       init: function() {
         // toggle global navigation
-        var $toggleBtn   = $('.gnav__trigger');
-        var $toggledMenu = $('.gnav__list');
+        var $toggleBtn   = $('.btnMenuTrigger');
+        var $toggledMenu = $('.gNav');
 
         $toggleBtn.on('click', function(e) {
           e.preventDefault();
 
-          $toggleBtn.toggleClass('gnav__list--active');
-          $toggledMenu.toggleClass('gnav__list--active');
+          $toggleBtn.toggleClass('gNav--is-active');
+          $toggledMenu.toggleClass('gNav--is-active');
 
         });
         // add button that display child menu items
-        $('#gnav-list').find('.menu-item-has-children > a').after('<button class="gnav__arrowdown"></button>');
+        $('#gNav').find('.gMenu__item--has-child > a').after('<button class="btnSlideMenu"></button>');
 
         // toggle submenu items.
-        var $dropDownToggle = $('.gnav__arrowdown');
+        var $dropDownToggle = $('#gNav').find('.btnSlideMenu');
 
         $dropDownToggle.on('click', function(e) {
-          $(this).siblings('.sub-menu').slideToggle();
+          $(this).siblings('.js-dropdown').slideToggle();
         });
       }
     };
@@ -38,16 +38,16 @@
     // pc
     var dropdown = {
       init: function() {
-        var $dropDown = $('.gMenu__item--hasChild > a');
+        var $dropdown = $('.gMenu__item--has-child');
 
-        $dropDown.hover(function() {
-          $('.subMenu', this).fadeIn('fast');
+        $dropdown.hover(function() {
+          $('>.js-dropdown', this).slideDown();
         },
         function() {
-          $('.subMenu', this).fadeOut('fast');
+          $('>.js-dropdown', this).slideUp();
         });
       }
     };
     dropdown.init();
   });
-});
+})(jQuery);
