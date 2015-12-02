@@ -25,7 +25,7 @@
     "gulp-imagemin": "latest",
     "gulp-jade": "latest",
     "gulp-load-plugins": "latest",
-    "gulp-plumber": "latest",
+    "gulp-plumber": "^1.0.1",
     "gulp-prettify": "latest",
     "gulp-rename": "latest",
     "gulp-sass": "^2.0.4",

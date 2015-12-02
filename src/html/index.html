@@ -11,17 +11,46 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/genericons/genericons.css">
   </head>
   <body class="home">
     <div class="l-container">
       <header role="banner" class="l-header">
-        <h1><a href="">Hello World!</a></h1>
+        <h1 class="sitetitle"><a href="#">
+            <svg viewBox="0 0 104 19" role="img" area-labelledby="title desc" width="104px" height="20px">
+              <use xlink:href="/assets/images/sprite.symbol.svg#logo_asknode"></use>
+            </svg></a></h1><a href="#" class="btnMenuTrigger"></a>
+        <nav id="gNav" class="gNav">
+          <ul class="gMenu">
+            <li class="gMenu__item"><a href="#">ABOUT</a></li>
+            <li class="gMenu__item gMenu__item--has-child"><a href="http://asknode.net/">SERVICE</a>
+              <ul class="subMenu js-dropdown">
+                <li><a href="#">DESIGN</a></li>
+                <li><a href="#">CODING</a></li>
+                <li><a href="#">WordPress</a></li>
+                <li><a href="#">WRITING</a></li>
+              </ul>
+            </li>
+            <li class="gMenu__item"><a href="#">WORKS</a></li>
+            <li class="gMenu__item"><a href="#">CONTACT</a></li>
+            <li class="gMenu__item"><a href="#">BLOG</a></li>
+            <li class="gMenu__item">
+              <ul class="socialMenu">
+                <li class="socialMenu__item"><a href="https://facebook.com/megumi.hano/" target="_blank">
+                    <svg viewBox="0 0 16 17" role="img" area-labelledby="title desc" width="20px" height="21px">
+                      <use xlink:href="/assets/images/sprite.symbol.svg#icon_fb"></use>
+                    </svg></a></li>
+                <li class="socialMenu__item"><a href="https://github.com/featherplain/" target="_blank">
+                    <svg viewBox="0 0 17 17" role="img" area-labelledby="title desc" width="20px" height="20px">
+                      <use xlink:href="/assets/images/sprite.symbol.svg#icon_gh"></use>
+                    </svg></a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </header>
       <div class="l-main">
-        <div class="l-primary">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>セロ弾きのゴーシュ</p><a href="http://asknode.net/" target="_blank" class="btn">button</a><a href="http://asknode.net/" target="_blank" class="btnFull">full width button</a><a href="http://asknode.net/" target="_blank" class="btnGhost">ghost button</a>
-        </div>
+        <div class="l-primary"></div>
         <div class="l-sidebar"></div>
       </div>
       <footer class="l-footer">

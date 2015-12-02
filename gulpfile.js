@@ -126,17 +126,19 @@ gulp.task('jade', function() {
 /* js tasks
 /*----------------------------------------------------------------------------*/
 
-gulp.task('jsLib', function() {
-  return gulp.src(paths.jsPath + 'lib/*.js')
-    .pipe($.concat('lib.js'))
-    .pipe($.uglify())
-    .pipe($.rename({ suffix: '.min' }))
-    .pipe(gulp.dest(paths.jsDest))
-    .pipe(browserSync.reload({ stream: true }));
-});
+// gulp.task('jsLib', function() {
+//   return gulp.src(paths.jsPath + 'lib/*.js')
+//     // .pipe($.plumber())
+//     .pipe($.concat('lib.js'))
+//     .pipe($.uglify())
+//     .pipe($.rename({ suffix: '.min' }))
+//     .pipe(gulp.dest(paths.jsDest))
+//     .pipe(browserSync.reload({ stream: true }));
+// });
 
 gulp.task('jsApp', function() {
   return gulp.src(paths.jsPath + 'app/*.js')
+    // .pipe($.plumber())
     .pipe($.concat('script.js'))
     .pipe($.uglify())
     .pipe($.rename({ suffix: '.min' }))
@@ -146,7 +148,7 @@ gulp.task('jsApp', function() {
 
 gulp.task('jsTasks', [
   'jsApp',
-  'jsLib'
+  // 'jsLib'
 ]);
 
 /*----------------------------------------------------------------------------*/
