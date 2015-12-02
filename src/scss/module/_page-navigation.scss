@@ -12,14 +12,12 @@
     @include grid-row();
   }
   &__item {
+    @include grid-column($columns: 6, $collapse: false);
     &--prev {
       text-align: left;
     }
     &--next {
       text-align: right;
-    }
-    @media #{$medium-up} {
-      @include grid-column($columns: 6, $collapse: false);
     }
     a {
       color: #fff;
