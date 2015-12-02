@@ -144,7 +144,7 @@ $buttonRadius: $baseRadius;
 @mixin btnBase() {
   display: inline-block;
   margin: 1rem 0;
-  padding: 0.875rem 1.75rem 0.9375rem 1.75rem;
+  padding: 0.875rem 0 0.9375rem 0;
   text-align: center;
   &:focus {
     outline: 0;
@@ -175,6 +175,7 @@ $buttonRadius: $baseRadius;
   @if $radius {
     border-radius: $baseRadius;
   }
+  &:link,
   &:visited {
     color: $color;
   }
@@ -210,6 +211,23 @@ $buttonRadius: $baseRadius;
   &:focus {
     background-color: $color;
     color: $colorHover;
+  }
+}
+
+//----------------------------------------------------------------------------
+// styles
+//----------------------------------------------------------------------------
+
+@mixin styleTitle($color, $colorShadow) {
+  color: $color;
+  font-family: $fontFamilyEn;
+  font-size: rem-calc(28);
+  line-height: 1;
+  text-align: center;
+  text-shadow: 1px 1px 0 $colorShadow;
+  -webkit-font-smoothing: antialiased;
+  @media #{$medium-up} {
+    font-size: rem-calc(48);
   }
 }
 

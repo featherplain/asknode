@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="4px" height="4px" viewBox="0 0 4 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4.2 (15855) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_circle.svg</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="front-page" sketch:type="MSArtboardGroup" transform="translate(-299.000000, -3418.000000)" fill="#DF0067">
+            <g id="footer" sketch:type="MSLayerGroup" transform="translate(0.000000, 2740.000000)">
+                <g id="copyright" transform="translate(0.000000, 640.000000)" sketch:type="MSShapeGroup">
+                    <g id="Theme-by-featherplai-+-Oval-3-+-Proudy-powerd-by-Wor" transform="translate(115.000000, 32.000000)">
+                        <circle id="icon_circle.svg" cx="186" cy="8" r="2"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

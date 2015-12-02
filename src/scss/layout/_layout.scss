@@ -9,11 +9,18 @@
 .l-header {
   @extend %baseWidth;
 }
-.l-footer {
-  @extend %baseWidth;
-}
+.l-footer {}
 .l-main {
   @extend %baseWidth;
+  background-color: $colorBg;
+  height: 200px;
 }
 .l-primary {}
 .l-sidebar {}
+.row {
+  @include grid-row();
+  // box-sizing: border-box;
+  @media #{$small-only} {
+    padding: 0 10px;
+  }
+}

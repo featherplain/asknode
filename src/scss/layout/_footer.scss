@@ -3,4 +3,65 @@
 /* -------------------------------------------------------------- */
 /* footer
 /* -------------------------------------------------------------- */
-.l-footer {}
+.l-footer {
+}
+
+/**
+ * contact
+ */
+.contact {
+  padding: 60px 0;
+  background-color: #fff;
+  &__inner {
+    width: 100%;
+    max-width: 342px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  &__title {
+    @include styleTitle($colorPink, $colorPinkLighten);
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+  &__text {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: rem-calc(14);
+  }
+}
+/**
+ * siteinfo
+ */
+.siteinfo {
+  padding: 32px 0;
+  background-color: $colorBlack;
+  font-family: $fontFamilyEn;
+  -webkit-font-smoothing: antialiased;
+  a {
+    color: #fff;
+  }
+  svg {
+    margin: 0 10px;
+    vertical-align: middle;
+  }
+  &__text {
+    margin: 32px 0;
+    color: #fff;
+    font-size: rem-calc(14);
+    text-align: center;
+    &--credit {
+      @media #{$medium-up} {
+        @include grid-column($columns: 6, $collapse: false, $float: left);
+        text-align: left;
+      }
+    }
+    &--copy {
+      @media #{$medium-up} {
+        @include grid-column($columns: 6, $collapse: false, $float: right);
+        text-align: right;
+      }
+    }
+  }
+}
