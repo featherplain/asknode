@@ -1,4 +1,13 @@
-.archivePageNav
-  ul.archivePageNav__list
-    li.archivePageNav__item.archivePageNav__item--pre: a(href="#") &lt;&lt; 前のページ
-    li.archivePageNav__item.archivePageNav__item--next: a(href="#") 次のページ &gt;&gt;
+if pageNavArchive
+  .archivePageNav
+    ul.archivePageNav__list
+      li.archivePageNav__item.archivePageNav__item--pre: a(href="#") &lt;&lt; 前のページ
+      li.archivePageNav__item.archivePageNav__item--next: a(href="#") 次のページ &gt;&gt;
+else
+  .singlePageNav
+    ul.singlePageNav__list
+      li.singlePageNav__item.singlePageNav__item--prev
+        a(href="#") ものすごく長い記事のタイトルです。文字が枠からはみ出してしまってあら大変。複数行のタイトルでも問題ないようにしましょう。
+      li.singlePageNav__item.singlePageNav__item--next
+        a(href="#") ものすごく長い記事のタイトルです。文字が枠からはみ出してしまってあら大変。複数行のタイトルでも問題ないようにしましょう。
+

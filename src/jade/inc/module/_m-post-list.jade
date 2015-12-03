@@ -2,20 +2,20 @@ if postArchive
   ul.postList
     - for (var x = 0; x < 12; x++)
       li.postList__item
-        a.postList__link(href="#")
-          article.post
-            .post__img
+        a.postList__link(href="./single.html")
+          article.postList__article
+            .postList__img
               img(src="/assets/images/thumb_sample-works.jpg" alt="")
-            .post__content
-              h3.post__title #{postTitle}
-              time.post__date 2015/11/22
+            .postList__content
+              h3.postList__title #{postTitle}
+              time.postList__date 2015/11/22
 else
   ul.postList
     - for (var x = 0; x < 6; x++)
       li.postList__item
-        a.postList__link(href="#")
-          article.post.post--works
-            .post__img
+        a.postList__link(href="./single-works.html")
+          article.postList__article.postList__article--works
+            .postList__img
               img(src="/assets/images/thumb_sample-works.jpg" alt="")
-            .post__content
-              h3.post__title #{postTitle}
+            .postList__content
+              h3.postList__title #{postTitle}

@@ -26,9 +26,13 @@ $colorSelection     : $colorLinkHover;
 
 // sns
 $colorFb            : #3b5598; // Facebook
+$colorFbHover       : darken($colorFb, 6%);
 $colorHa            : #0071c5; // Hatena Bookmark
+$colorHaHover       : darken($colorHa, 6%);
 $colorTw            : #55acee; // Twitter
+$colorTwHover       : darken($colorTw, 6%);
 $colorPo            : #ef4056; // Pocket
+$colorPoHover       : darken($colorPo, 6%);
 
 //----------------------------------------------------------------------------
 // Image file path
@@ -41,8 +45,7 @@ $imgPath           : "../images/";
 // primary font
 $fontFamily         : "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック","MS PGothic",Arial,Sans-Serif;
 // latin font
-// $fontFamilyEn       : "Montserrat", "Helvetica", "Arial", Sans-Serif;
-$fontFamilyEn       : "Abel", "Helvetica", "Arial", Sans-Serif;
+$fontFamilyEn       : "Montserrat", "Helvetica", "Arial", Sans-Serif;
 $fontFamilyCat      : "Pacifico", cursive;
 // code font
 $fontFamilyCode     : Menlo, Consolas, Courier, sans-serif;
@@ -56,6 +59,8 @@ $baseRadius         : 4px;
 // Grid
 //----------------------------------------------------------------------------
 $maxWidth           : 1080px;
+// post
+$postWidth          : 870px;
 
 //----------------------------------------------------------------------------
 // Navigation size

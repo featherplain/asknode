@@ -88,6 +88,21 @@
   font-family: FontAwesome;
   -webkit-font-smoothing: antialiased;
 }
+// use icmoon
+@mixin icomoon($content: '', $fontSize: 16px, $valign: middle){
+  content: $content;
+  font-family: 'icomoon' !important;
+  font-size: $fontSize;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: $valign;
+}
 
 //----------------------------------------------------------------------------
 // css graphic
@@ -175,10 +190,6 @@ $buttonRadius: $baseRadius;
   @if $radius {
     border-radius: $baseRadius;
   }
-  &:link,
-  &:visited {
-    color: $color;
-  }
   &:hover,
   &:active,
   &:focus {
@@ -203,10 +214,6 @@ $buttonRadius: $baseRadius;
   @if $radius {
     border-radius: $buttonRadius;
   }
-  &:link,
-  &:visited {
-    color: $color;
-  }
   &:hover,
   &:active,
   &:focus {
@@ -226,6 +233,7 @@ $buttonRadius: $baseRadius;
   color: $color;
   font-family: $fontFamilyEn;
   font-size: rem-calc(32);
+  font-weight: normal;
   line-height: 1;
   letter-spacing: 1.4px;
   text-align: center;
