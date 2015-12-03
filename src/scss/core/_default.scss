@@ -45,10 +45,6 @@ a {
   &:focus {
     outline: thin dotted;
   }
-  &:link,
-  &:visited {
-    color: $colorLink;
-  }
   &:hover,
   &:active,
   &:focus {
@@ -101,6 +97,7 @@ dl {
   }
   dd {
     margin-bottom: 1em;
+    margin-left: 0;
     &:last-child{
       margin-bottom: 0;
     }

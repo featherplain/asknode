@@ -1,0 +1,53 @@
+include inc/core/_config
+include inc/core/_mixins
+extends inc/core/_base
+block title
+  title= page.top.title
+block prepend meta
+  - var sitename = name
+  - var keywords = page.top.keywords
+  - var description = page.top.description
+  - var ogpimage = page.top.ogpimage
+  - var bodyClass = 'single-works'
+  - var pageNavArchive = false
+block append meta
+block body
+  .l-container
+    include inc/layout/_l-header
+    .l-main.l-main--single
+      h2.pageTitle.pageTitle--single Works
+      .l-primary
+        article.postWorks
+          header.postWorks__header
+            .postWorks__image
+              img(src="/assets/images/img_sample-attachment.jpg" alt="")
+            .postWorks__title
+              h1.postWorks__title__text WordCamp Tokyo 2015公式サイト
+          .postWorks__body
+            .postWorks__content
+              p これはコメントです。WordPress 実装では投稿タイプ works の本文になります。WordCamp Tokyo 2015 のテーマデザインと CSS カスタマイズをしました。 WordCamp Tokyo 2015のサイトデザインについてのおはなし #wctokyo に、デザインの裏話を綴っています。WordCamp Tokyo 2015 のテーマデザインと CSS カスタマイズをしました。 WordCamp Tokyo 2015のサイトデザインについてのおはなし #wctokyo に、デザインの裏話を綴っています。自分がどのように関わり、どう考えて設計・実装したかを記述すること
+              img(src="/assets/images/img_sample-attachment.jpg" alt="")
+              img(src="/assets/images/img_sample-attachment.jpg" alt="")
+              img(src="/assets/images/img_sample-attachment.jpg" alt="")
+              dl.worksMeta
+                dt.worksMeta__key scope
+                dd.worksMeta__value
+                  a.tagScope(href="#") Planning
+                  a.tagScope(href="#") Design
+                  a.tagScope(href="#") Coding
+                  a.tagScope(href="#") WordPress
+                dt.worksMeta__key client
+                dd.worksMeta__value 株式会社 featherplain 様
+                dt.worksMeta__key url
+                dd.worksMeta__value.worksMeta__value--en
+                  a(href="https://tokyo.wordcamp.org/2015/") https://tokyo.wordcamp.org/2015/
+                dt.worksMeta__key code
+                dd.worksMeta__value.worksMeta__value--en
+                  a(href="https://github.com/featherplain/wct2015/") https://github.com/featherplain/wct2015/
+              a.btnExternal.btnExternal--works(href="#") Web サイトをみる
+        // / .postWorks
+        include inc/module/_m-pagenav
+      // /. l-primary
+      .l-sidebar
+    include inc/layout/_l-footer
+block append scriptFooter

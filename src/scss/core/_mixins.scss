@@ -190,10 +190,6 @@ $buttonRadius: $baseRadius;
   @if $radius {
     border-radius: $baseRadius;
   }
-  &:link,
-  &:visited {
-    color: $color;
-  }
   &:hover,
   &:active,
   &:focus {
@@ -218,10 +214,6 @@ $buttonRadius: $baseRadius;
   @if $radius {
     border-radius: $buttonRadius;
   }
-  &:link,
-  &:visited {
-    color: $color;
-  }
   &:hover,
   &:active,
   &:focus {
@@ -241,6 +233,7 @@ $buttonRadius: $baseRadius;
   color: $color;
   font-family: $fontFamilyEn;
   font-size: rem-calc(32);
+  font-weight: normal;
   line-height: 1;
   letter-spacing: 1.4px;
   text-align: center;

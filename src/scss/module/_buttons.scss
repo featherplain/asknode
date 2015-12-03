@@ -56,5 +56,16 @@
     @include genericons($content: '\f442', $fontsize: 18px);
     padding-bottom: 8px;
   }
+  &--works {
+    @include btn(
+      $colorBg: $colorPink,
+      $color: #fff,
+      $fontSize: 16px,
+      $padding: 12px 0 14px 0,
+      $fullWidth: true,
+      $radius: true,
+      $boxShadow: true
+    );
+  }
 }
 

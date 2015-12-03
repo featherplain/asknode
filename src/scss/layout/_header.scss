@@ -9,7 +9,6 @@
   font-family: $fontFamilyEn;
   font-size: rem-calc(18);
   line-height: 1;
-  letter-spacing: 1px;
   padding: $menuPadding 14px;
 }
 %linkColorHome {
@@ -38,6 +37,7 @@
 .gMenu,
 .socialMenu {
   margin: 0;
+  -webkit-font-smoothing: antialiased;
   @extend %clearfix;
 }
 /**
@@ -58,7 +58,7 @@
     font-size: rem-calc(24);
     font-weight: 400;
     line-height: 1;
-    letter-spacing: 1px;
+    letter-spacing: -0.2px;
     vertical-align: middle;
     &:hover {
       color: $colorPink;

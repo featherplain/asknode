@@ -8,7 +8,8 @@
  */
 .l-container {
   background-color: $colorPink;
-  .single & {
+  .single &,
+  .single-works & {
     background-color: $colorBg;
   }
 }
