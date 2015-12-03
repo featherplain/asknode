@@ -9,21 +9,19 @@ block prepend meta
   - var description = page.top.description
   - var ogpimage = page.top.ogpimage
   - var bodyClass = ''
+  - var postTitle = 'ものすごく長い記事のタイトルです。文字が枠からはみ出してしまってあら大変。複数行でも問題ないデザインにしましょう。'
+  - var postArchive = true
 block append meta
 block body
   .l-container
     include inc/layout/_l-header
     .l-main
-      .worksArchive
-        h2.worksArchive__title WORKS
+      .postArchive
+        h2.postArchive__title BLOG
+        p.postMeta
+          span.postMeta__inner Category
         .row
-          ul.listWorks
-            - for (var x = 0; x < 9; x++)
-              li.listWorks__item
-                a.listWorks__link(href="#")
-                  article.work
-                    img(src="/assets/images/thumb_sample-works.jpg" alt="")
-                    h3.work__title WordCamp Tokyo 2015 公式サイト
-      include inc/module/_m-pagenav
+          include inc/module/_m-post-list
+        include inc/module/_m-pagenav
     include inc/layout/_l-footer
 block append scriptFooter

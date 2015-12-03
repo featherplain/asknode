@@ -3,13 +3,15 @@
 /* -------------------------------------------------------------- */
 /* layout
 /* -------------------------------------------------------------- */
+/**
+ * l-container
+ */
 .l-container {
   background-color: $colorPink;
 }
-.l-header {
-  @extend %baseWidth;
-}
-.l-footer {}
+/**
+ * l-main
+ */
 .l-main {
   @extend %baseWidth;
   margin-top: 56px;
@@ -17,11 +19,13 @@
 }
 .l-primary {}
 .l-sidebar {}
+/**
+ * grid row
+ */
 .row {
   @include grid-row();
-  // box-sizing: border-box;
   @media #{$small-only} {
-    padding: 0 14px;
+    padding: 0 10px;
   }
 }
 /**

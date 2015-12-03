@@ -25,7 +25,7 @@
   width: 100%;
   height: $headerHeight;
   background-color: #fff;
-  box-sizing: border-box;
+  z-index: 12;
   // front page
   .home & {
     background-color: transparent;
