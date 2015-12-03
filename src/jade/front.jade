@@ -9,6 +9,8 @@ block prepend meta
   - var description = page.top.description
   - var ogpimage = page.top.ogpimage
   - var bodyClass = 'home'
+  - var postTitle = 'WordCamp Tokyo 2015公式サイト'
+  - var postArchive = false
 block append meta
 block body
   .l-container
@@ -44,15 +46,6 @@ block body
             p.featuredWork__excerpt WordPress のオリジナルテーマです。ここに紹介文が入ります。ここに紹介文が入ります。WordPress のオリジナルテーマです。ここに紹介文が入ります。ここに紹介文が入ります。
             a.btnExternal(href="http://amethyst.asknode.net/" target="_blank") デモサイトをみる
       .row
-        ul.listWorks
-          - for (var x = 0; x < 6; x++)
-            li.listWorks__item
-              a.listWorks__link(href="#")
-                article.work
-                  img(src="/assets/images/thumb_sample-works.jpg" alt="")
-                  h3.work__title WordCamp Tokyo 2015 公式サイト
-
-
-
+        include inc/module/_m-post-list
     include inc/layout/_l-footer
 block append scriptFooter

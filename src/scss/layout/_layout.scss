@@ -3,25 +3,29 @@
 /* -------------------------------------------------------------- */
 /* layout
 /* -------------------------------------------------------------- */
+/**
+ * l-container
+ */
 .l-container {
-  background-color: $colorBg;
+  background-color: $colorPink;
 }
-.l-header {
-  @extend %baseWidth;
-}
-.l-footer {}
+/**
+ * l-main
+ */
 .l-main {
   @extend %baseWidth;
-  background-color: $colorBg;
-  height: 200px;
+  margin-top: 56px;
+  margin-bottom: 60px;
 }
 .l-primary {}
 .l-sidebar {}
+/**
+ * grid row
+ */
 .row {
   @include grid-row();
-  // box-sizing: border-box;
   @media #{$small-only} {
-    padding: 0 14px;
+    padding: 0 10px;
   }
 }
 /**

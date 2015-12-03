@@ -1,0 +1,27 @@
+include inc/core/_config
+include inc/core/_mixins
+extends inc/core/_base
+block title
+  title= page.top.title
+block prepend meta
+  - var sitename = name
+  - var keywords = page.top.keywords
+  - var description = page.top.description
+  - var ogpimage = page.top.ogpimage
+  - var bodyClass = ''
+  - var postTitle = 'ものすごく長い記事のタイトルです。文字が枠からはみ出してしまってあら大変。複数行でも問題ないデザインにしましょう。'
+  - var postArchive = true
+block append meta
+block body
+  .l-container
+    include inc/layout/_l-header
+    .l-main
+      .postArchive
+        h2.postArchive__title BLOG
+        p.postMeta
+          span.postMeta__inner Category
+        .row
+          include inc/module/_m-post-list
+        include inc/module/_m-pagenav
+    include inc/layout/_l-footer
+block append scriptFooter

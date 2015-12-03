@@ -115,7 +115,7 @@
  * works
  */
 .topWorks {
-  background: url($imgPath + "img_triangle.svg") right top no-repeat $colorPink;
+  @include bgTriangle();
   background-size: 80%;
   padding: 40px 0;
   &__title {
@@ -155,36 +155,5 @@
     &__content {
       @include grid-column($columns: 4, $collapse: false);
     }
-  }
-}
-.listWorks {
-  @include grid-row;
-  margin: 20px 0;
-  padding: 14px;
-  background-color: #fff;
-  &__link {
-    display: block;
-    transition: .3s;
-    &:hover {
-      h3 {
-        color: $colorPink;
-      }
-    }
-  }
-  // media query
-  @media #{$medium-up} {
-    padding: 30px;
-    &__item {
-      @include grid-column($columns: 4, $collapse: false);
-    }
-  }
-}
-.work {
-  border: 1px solid $colorBorder;
-  margin: 10px 0;
-  &__title {
-    font-size: rem-calc(14);
-    margin: 18px 20px 20px 20px;
-
   }
 }

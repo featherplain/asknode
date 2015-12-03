@@ -1,0 +1,25 @@
+include inc/core/_config
+include inc/core/_mixins
+extends inc/core/_base
+block title
+  title= page.top.title
+block prepend meta
+  - var sitename = name
+  - var keywords = page.top.keywords
+  - var description = page.top.description
+  - var ogpimage = page.top.ogpimage
+  - var bodyClass = ''
+  - var postTitle = 'WordCamp Tokyo 2015公式サイト'
+  - var postArchive = false
+block append meta
+block body
+  .l-container
+    include inc/layout/_l-header
+    .l-main
+      .postArchive
+        h2.postArchive__title WORKS
+        .row
+          include inc/module/_m-post-list
+      include inc/module/_m-pagenav
+    include inc/layout/_l-footer
+block append scriptFooter
