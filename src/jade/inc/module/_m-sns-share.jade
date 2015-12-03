@@ -1,0 +1,29 @@
+.snsShare
+  .fbLike(style="background-image: url(/assets/images/img_sample-sns.jpg);")
+    .fbLike__overlay
+      h3.fbLike__title ものすごく長い記事のタイトルです。文字が枠からはみ出してしまってあら大変。複数行のタイトルでも問題ないようにしましょう。
+      .fbLike__btnWrap
+        .fb-like
+  ul.snsShare__list
+    li.snsShare__item
+      a.btnShare.btnShare--fb(href="#")
+        svg(role="img" width="18px" height="18px")
+          use(xlink:href="/assets/images/sprite.symbol.svg#icon_fb")
+        span.btnShare__text シェア
+        span.count.count--fb 1000
+    li.snsShare__item
+      a.btnShare.btnShare--ha(href="#")
+        svg(role="img" width="18px" height="16px")
+          use(xlink:href="/assets/images/sprite.symbol.svg#icon_ha")
+        span.btnShare__text はてブ
+        span.count.count--ha 1000
+    li.snsShare__item
+      a.btnShare.btnShare--tw(href="#")
+        svg(role="img" width="20px" height="16px")
+          use(xlink:href="/assets/images/sprite.symbol.svg#icon_tw")
+        span.btnShare__text ツイート
+    li.snsShare__item
+      a.btnShare.btnShare--po(href="#")
+        svg(role="img" width="18px" height="16px")
+          use(xlink:href="/assets/images/sprite.symbol.svg#icon_po")
+        span.btnShare__text 後で読む

@@ -8,6 +8,9 @@
  */
 .l-container {
   background-color: $colorPink;
+  .single & {
+    background-color: $colorBg;
+  }
 }
 /**
  * l-main
@@ -16,6 +19,11 @@
   @extend %baseWidth;
   margin-top: 56px;
   margin-bottom: 60px;
+  &--single {
+    @media #{$small-only} {
+      margin: 0;
+    }
+  }
 }
 .l-primary {}
 .l-sidebar {}
@@ -26,6 +34,17 @@
   @include grid-row();
   @media #{$small-only} {
     padding: 0 10px;
+  }
+}
+/**
+ * page title
+ */
+.pageTitle {
+  &--single {
+    @include styleTitle($colorPink, $colorPinkLighten);
+  }
+  &--archive {
+    @include styleTitle(#fff, $colorPinkDarken);
   }
 }
 /**
