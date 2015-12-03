@@ -24,3 +24,50 @@
     }
   }
 }
+/**
+ * single
+ */
+.singlePageNav {
+  @extend %postWidth;
+  &__list {
+    @extend %clearfix;
+    margin: 40px 0;
+    background-color: #fff;
+  }
+  &__item {
+    @include grid-column($columns: 6, $collapse: false);
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 1.2;
+    &:before,
+    &:after {
+      display: inline-block;
+      position: absolute;
+      top: 26px;
+      color: $colorPink;
+    }
+    &--prev {
+      padding-left: 56px;
+      &:before {
+        @include icomoon('\e900', 28px);
+        left: 18px;
+      }
+    }
+    &--next {
+      padding-right: 56px;
+      &:after {
+        @include icomoon('\e901', 28px);
+        right: 18px;
+      }
+    }
+    a {
+      color: $colorText;
+      font-size: rem-calc(12);
+      &:hover {
+        color: $colorPink;
+        font-weight: bold;
+      }
+    }
+  }
+}

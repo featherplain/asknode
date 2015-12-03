@@ -4,9 +4,7 @@
 /* post
 /* -------------------------------------------------------------- */
 .post {
-  width: 100%;
-  max-width: 870px;
-  margin: 0 auto;
+  @extend %postWidth;
   background-color: #fff;
   &__header {
     position: relative;
@@ -46,6 +44,7 @@
   }
   &__title {
     margin: 40px 0;
+    color: lighten($colorText, 8%);
     font-size: rem-calc(16);
     font-weight: bold;
   }
@@ -58,9 +57,11 @@
   }
   &__excerpt,
   &__content {
+    color: lighten($colorText, 8%);
     margin: 30px 0;
     font-size: rem-calc(14);
-    line-height: 1.8;
+    line-height: 2.0;
+    letter-spacing: 0.1px;
   }
   // media query
   @media #{$medium-up} {

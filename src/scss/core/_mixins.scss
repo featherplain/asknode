@@ -88,6 +88,21 @@
   font-family: FontAwesome;
   -webkit-font-smoothing: antialiased;
 }
+// use icmoon
+@mixin icomoon($content: '', $fontSize: 16px, $valign: middle){
+  content: $content;
+  font-family: 'icomoon' !important;
+  font-size: $fontSize;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: $valign;
+}
 
 //----------------------------------------------------------------------------
 // css graphic

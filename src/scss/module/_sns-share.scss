@@ -7,9 +7,6 @@
   width: 100%;
   max-width: 650px;
   margin: 40px 0;
-  &__post {
-
-  }
   &__list {
     margin: 0;
     display: flex;
@@ -26,29 +23,43 @@
   text-align: center;
   padding: 10px 12px;
   span {
-    color: #fff;
-    font-size: rem-calc(12);
+    display: none;
   }
-  svg {
+  &__icon {
     vertical-align: middle;
-    margin-right: 10px;
+    margin: 0 8px;
   }
   &--fb {
     background-color: $colorFb;
+    &:hover {
+      background-color: $colorFbHover;
+    }
   }
   &--ha {
     background-color: $colorHa;
+    &:hover {
+      background-color: $colorHaHover;
+    }
   }
   &--tw {
     background-color: $colorTw;
+    &:hover {
+      background-color: $colorTwHover;
+    }
   }
   &--po {
     background-color: $colorPo;
+    &:hover {
+      background-color: $colorPoHover;
+    }
   }
   // media query
-  @media #{$small-only} {
+  @media #{$medium-up} {
     span {
-      display: none;
+      display: inline-block;
+      margin: 0 2px;
+      color: #fff;
+      font-size: rem-calc(12);
     }
   }
 }
@@ -57,7 +68,6 @@
  */
 .fbLike {
   position: relative;
-  height: 140px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -78,7 +88,7 @@
   }
   &__title {
     margin: 10px 0;
-    padding: 0 30px;
+    padding: 0 20px;
   }
   &__btnWrap {
     margin: 14px 0;
