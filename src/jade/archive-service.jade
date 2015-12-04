@@ -1,0 +1,50 @@
+include inc/core/_config
+include inc/core/_mixins
+extends inc/core/_base
+block title
+  title= page.top.title
+block prepend meta
+  - var sitename = name
+  - var keywords = page.top.keywords
+  - var description = page.top.description
+  - var ogpimage = page.top.ogpimage
+  - var bodyClass = ''
+block append meta
+block body
+  .l-container
+    include inc/layout/_l-header
+    .l-main
+      h2.pageTitle.pageTitle--archive SERVICE
+      .postArchive
+        .row
+          ul.listService.listService--archive
+            li.listService__item.listService__item--col2
+              article.service
+                img(src="/assets/images/img_design.png" alt="")
+                .service__inner
+                  h3.service__title デザイン
+                  p.service__excerpt 目的達成に必要な設計やページ構成から検討します。協業によるPhotoshop 等でのデザインカンプ制作のみも承ります。
+                  a.btnMore(href="#") &gt;&gt; くわしく
+            li.listService__item.listService__item--col2
+                article.service
+                  img(src="/assets/images/img_coding.png" alt="")
+                  .service__inner
+                    h3.service__title コーディング
+                    p.service__excerpt 目的達成に必要な設計やページ構成から検討します。協業によるPhotoshop 等でのデザインカンプ制作のみも承ります。
+                    a.btnMore(href="#") &gt;&gt; くわしく
+            li.listService__item.listService__item--col2
+                article.service
+                  img(src="/assets/images/img_wordpress.png" alt="")
+                  .service__inner
+                    h3.service__title WordPress
+                    p.service__excerpt 目的達成に必要な設計やページ構成から検討します。協業によるPhotoshop 等でのデザインカンプ制作のみも承ります。
+                    a.btnMore(href="#") &gt;&gt; くわしく
+            li.listService__item.listService__item--col2
+                article.service
+                  img(src="/assets/images/img_writing.png" alt="")
+                  .service__inner
+                    h3.service__title 書籍の執筆
+                    p.service__excerpt 目的達成に必要な設計やページ構成から検討します。協業によるPhotoshop 等でのデザインカンプ制作のみも承ります。
+                    a.btnMore(href="#") &gt;&gt; くわしく
+    include inc/layout/_l-footer
+block append scriptFooter
