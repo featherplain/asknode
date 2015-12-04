@@ -9,8 +9,12 @@
     /* WordPress editor styles
     /* -------------------------------------------------------------- */
 
-    .entry-content {
+    .post__content {
       @include wp-editor-styles;
+
+      .iconSkill {
+        margin: 0;
+      }
     }
 
   }

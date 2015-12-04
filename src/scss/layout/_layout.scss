@@ -9,7 +9,8 @@
 .l-container {
   background-color: $colorPink;
   .single &,
-  .single-works & {
+  .single-works &,
+  .single-service & {
     background-color: $colorBg;
   }
 }
@@ -17,17 +18,30 @@
  * l-main
  */
 .l-main {
-  @extend %baseWidth;
-  margin-top: 56px;
+  // @extend %baseWidth;
+  @include grid-row();
+  margin-top: 0;
   margin-bottom: 60px;
-  &--single {
+  &--post {
     @media #{$small-only} {
       margin: 0;
     }
   }
 }
-.l-primary {}
-.l-sidebar {}
+@media #{$large-up} {
+  .l-primary {
+    @include grid-column($columns: 8, $collapse: false);
+    &--post {
+      width: 100%;
+      max-width: $postWidth;
+      margin: 0 auto;
+      float: none;
+    }
+  }
+  .l-sidebar {
+    @include grid-column($columns: 4, $collapse: false);
+  }
+}
 /**
  * grid row
  */
@@ -41,7 +55,7 @@
  * page title
  */
 .pageTitle {
-  &--single {
+  &--post {
     @include styleTitle($colorPink, $colorPinkLighten);
   }
   &--archive {

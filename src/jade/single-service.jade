@@ -1,0 +1,70 @@
+include inc/core/_config
+include inc/core/_mixins
+extends inc/core/_base
+block title
+  title= page.top.title
+block prepend meta
+  - var sitename = name
+  - var keywords = page.top.keywords
+  - var description = page.top.description
+  - var ogpimage = page.top.ogpimage
+  - var bodyClass = 'single-service'
+  - var pageNavArchive = false
+block append meta
+block body
+  .l-container
+    include inc/layout/_l-header
+    .l-main.l-main--post
+      h2.pageTitle.pageTitle--post Service
+      .l-primary.l-primary--post
+        article.post
+          header.post__header
+            .post__image
+              img(src="/assets/images/img_design.png" alt="")
+          .post__body
+            h1.post__title.post__title--center デザイン
+            i.post__separator
+              svg(role="img" width="38px" height="6px")
+                use(xlink:href="/assets/images/sprite.symbol.svg#icon_dots")
+            .post__content
+              p あれも事実もうその膨脹打というののためを据えませです。しばしば今を発音人はどうもその開始なんまでに立ち行かばいるましをは担任ありあわせんだば、ちょっとには措いなたたない。最後と尽すますものはまあほかにはなはだたでしょで。あれも事実もうその膨脹打というののためを据えませです。しばしば今を発音人はどうもその開始なんまでに立ち行かばいるましをは担任ありあわせんだば、ちょっとには措いなたたない。最後と尽すますものはまあほかにはなはだたでしょで。
+              p あれも事実もうその膨脹打というののためを据えませです。しばしば今を発音人はどうもその開始なんまでに立ち行かばいるましをは担任ありあわせんだば、ちょっとには措いなたたない。最後と尽すますものはまあほかにはなはだたでしょで。あれも事実もうその膨脹打というののためを据えませです。しばしば今を発音人はどうもその開始なんまでに立ち行かばいるましをは担任ありあわせんだば、ちょっとには措いなたたない。最後と尽すますものはまあほかにはなはだたでしょで。
+              .m-panel-bg
+                p あれも事実もうその膨脹打というののためを据えませです。しばしば今を発音人はどうもその開始なんまでに立ち行かばいるましをは担任ありあわせんだば、ちょっとには措いなたたない。最後と尽すますものはまあほかにはなはだたでしょで。あれも事実もうその膨脹打というののためを据えませです。しばしば今を発音人はどうもその開始なんまでに立ち行かばいるましをは担任ありあわせんだば、ちょっとには措いなたたない。最後と尽すますものはまあほかにはなはだたでしょで。
+              p もう大森さんが反対口調そう焦燥をするです例その詩私か所有をというお発展んないだろなつつ、その次第は私か二つ装束をするて、岩崎君のものに教師の私にもしご見当と乗ってどこ順序に実説明にしようにもちろん小吹聴でできだたで、けっしてもう修養としたているなのが罹りないまい。するとしかしご一口に込み入っのぞ実際不安とあるだて、どんな自己をもあるたがといった他に聞いでいないな。そうしたため名のためこの幸は私中に外れんかと岡田君に遂げよませなけれ、学校の十月たってお盲動ますなうじゃ、政府のために個性に事実などの海鼠が今見えていて、どうの前へなりでこの時で大分申し上げたなけれとしなのたから、好いですんて全くご手段しない訳なけれななけれ。すなわち此年か低級か満足をなっでて、次第ごろ個性で入っとおらある日をご準備の同年にしでしだ。
+              .m-panel
+                p 今ではちょうど失っば嫌うたますんでけれども、何しろそのうち死んて観念もちょっと若いだろ事ん。そこでご講演にいるがもいた事ましば、通りには、しかるに彼らかしがなりれたた見えれでたと抱いて、珍も立つがなりですない。
+              h2 使用ツール
+              ul.m-inline-list
+                li
+                  svg.iconSkill(role="img" width="40px" height="40px")
+                    use(xlink:href="/assets/images/sprite.symbol.svg#icon_ps")
+                li
+                  svg.iconSkill(role="img" width="40px" height="40px")
+                    use(xlink:href="/assets/images/sprite.symbol.svg#icon_ai")
+                li
+                  svg.iconSkill(role="img" width="40px" height="38px")
+                    use(xlink:href="/assets/images/sprite.symbol.svg#icon_diamond")
+                li
+                  svg.iconSkill(role="img" width="34px" height="40px")
+                    use(xlink:href="/assets/images/sprite.symbol.svg#icon_head")
+              h2 できること
+              ul.m-inline-list
+                li
+                  span.m-tag.m-tag--check レスポンシブウェブデザイン
+                li
+                  span.m-tag.m-tag--check スマホ専用サイトのデザイン
+                li
+                  span.m-tag.m-tag--check Sketch を使用した Web デザイン
+                li
+                  span.m-tag.m-tag--check バナーなどのパーツ単位でのデザイン
+              h2 できないこと
+              ul.inlineList
+                li
+                  span.m-tag.m-tag--cross グラフィックデザインのみのご注文
+              a.m-btn-full(href="") デザインに関する実績を見る
+        // / .post
+        include inc/module/_m-pagenav
+      // /. l-primary
+    include inc/layout/_l-footer
+block append scriptFooter
