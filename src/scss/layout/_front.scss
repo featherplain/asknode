@@ -83,14 +83,25 @@
   }
 }
 .listService {
+  @include grid-row();
+  &--archive {
+    background-color: #fff;
+    padding: 30px;
+  }
   &__item {
     margin: 20px 0;
+    list-style-type: none;
     // media query
     @media #{$medium-up} {
       @include grid-column($columns: 6, $collapse: false);
     }
     @media #{$large-up} {
       @include grid-column($columns: 3, $collapse: false);
+    }
+    &--col2 {
+      @media #{$large-up} {
+        @include grid-column($columns: 6, $collapse: false);
+      }
     }
   }
 }

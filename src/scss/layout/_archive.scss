@@ -4,19 +4,13 @@
 /* archive
 /* -------------------------------------------------------------- */
 
-.postArchive {
-  &__title {
-    @include styleTitle(#fff, $colorPinkLighten);
-    margin: 20px 0;
-  }
-}
+.postArchive {}
 /**
  * post list
  */
 .postList {
   @include grid-row();
   background-color: #fff;
-  margin: 20px 0;
   padding: 14px;
   &__link {
     display: block;
@@ -64,6 +58,7 @@
  */
 .postMeta {
   position: relative;
+  margin: 30px 0;
   text-align: center;
   color: #fff;
   font-family: $fontFamilyCat;
