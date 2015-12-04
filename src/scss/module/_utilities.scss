@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------- */
+/* module classes for WordPress editor
+/* -------------------------------------------------------------- */
+/**
+ * inline list
+ */
+.m-inline-list {
+  li {
+    display: inline-block;
+    @media #{$medium-up} {
+    }
+    margin: 6px 2px;
+    list-style-type: none;
+    line-height: 1;
+  }
+}
+/**
+ * tags
+ */
+.m-tag {
+  background-color: $colorBg;
+  border-radius: 2px;
+  font-size: rem-calc(12);
+  padding: 8px 12px;
+  &--check {
+    &:before {
+      @include genericons($content: '\f418', $fontsize: 22px);
+      color: $colorBlueLighten;
+      vertical-align: middle;
+    }
+  }
+  &--cross {
+    &:before {
+      @include genericons($content: '\f405', $fontsize: 22px);
+      color: $colorPinkLighten;
+      vertical-align: middle;
+    }
+  }
+}
+/**
+ * panel
+ */
+.m-panel {
+  border: 1px solid $colorBorder;
+  border-radius: 2px;
+  padding: 0 30px;
+  * {
+    font-size: 0.86em;
+  }
+}
+.m-panel-bg {
+  @extend .m-panel;
+  background-color: $colorBg;
+  border: 1px solid $colorBg;
+}
+/**
+ * buttons
+ */
+.m-btn {
+  @include btn(
+    $colorBg: $colorPink,
+    $color: #fff,
+    $fontSize: 16px,
+    $padding: 10px,
+    $radius: true,
+    $boxShadow: true
+  );
+}
+.m-btn-full {
+  @extend .m-btn;
+  width: 100%;
+}
