@@ -3,72 +3,122 @@
 /* -------------------------------------------------------------- */
 /* module classes for WordPress editor
 /* -------------------------------------------------------------- */
-/**
- * inline list
- */
-.m-inline-list {
-  li {
+.styleEditor {
+  /**
+   * inline list
+   */
+  .inlineList {
+    padding-left: 0;
+    li {
+      display: inline-block;
+      margin: 6px 2px;
+      list-style-type: none;
+      line-height: 1;
+    }
+  }
+  /**
+   * tags
+   */
+  .tag {
     display: inline-block;
-    @media #{$medium-up} {
+    margin: 6px;
+    background-color: $colorBg;
+    border-radius: 2px;
+    font-size: rem-calc(12);
+    padding: 4px 10px;
+    &--check {
+      &:before {
+        @include genericons($content: '\f418', $fontsize: 22px);
+        color: $colorBlueLighten;
+        vertical-align: middle;
+      }
     }
-    margin: 6px 2px;
-    list-style-type: none;
-    line-height: 1;
-  }
-}
-/**
- * tags
- */
-.m-tag {
-  background-color: $colorBg;
-  border-radius: 2px;
-  font-size: rem-calc(12);
-  padding: 8px 12px;
-  &--check {
-    &:before {
-      @include genericons($content: '\f418', $fontsize: 22px);
-      color: $colorBlueLighten;
-      vertical-align: middle;
+    &--cross {
+      &:before {
+        @include genericons($content: '\f405', $fontsize: 22px);
+        color: $colorPinkLighten;
+        vertical-align: middle;
+      }
     }
   }
-  &--cross {
-    &:before {
-      @include genericons($content: '\f405', $fontsize: 22px);
-      color: $colorPinkLighten;
-      vertical-align: middle;
+  /**
+   * panel
+   */
+  .panel {
+    border: $borderStyle;
+    border-radius: 2px;
+    padding: 0 20px;
+    >* {
+      font-size: 90%;
+      margin: 20px 0;
+    }
+    &--warning {
+      position: relative;
+      &:before {
+        @include genericons($content: '\f414', $fontsize: 28px, $position: absolute);
+        top: 22px;
+        left: 14px;
+        color: $colorPink;
+      }
+      >* {
+        padding-left: 32px;
+      }
+    }
+    &--info {
+      position: relative;
+      &:before {
+        @include genericons($content: '\f455', $fontsize: 28px, $position: absolute);
+        top: 22px;
+        left: 14px;
+        color: $colorBlue;
+      }
+      > * {
+        padding-left: 32px;
+      }
     }
   }
-}
-/**
- * panel
- */
-.m-panel {
-  border: 1px solid $colorBorder;
-  border-radius: 2px;
-  padding: 0 30px;
-  * {
-    font-size: 0.86em;
+  /**
+   * buttons
+   */
+  .btn {
+    @include btn(
+      $colorBg: $colorPink,
+      $color: #fff,
+      $fontSize: 16px,
+      $padding: 10px,
+      $radius: true,
+      $boxShadow: true
+    );
   }
-}
-.m-panel-bg {
-  @extend .m-panel;
-  background-color: $colorBg;
-  border: 1px solid $colorBg;
-}
-/**
- * buttons
- */
-.m-btn {
-  @include btn(
-    $colorBg: $colorPink,
-    $color: #fff,
-    $fontSize: 16px,
-    $padding: 10px,
-    $radius: true,
-    $boxShadow: true
-  );
-}
-.m-btn-full {
-  @extend .m-btn;
-  width: 100%;
+  .btnFull {
+    @extend .btn;
+    width: 100%;
+  }
+  /**
+   * link
+   */
+  .link {
+    border: $borderStyle;
+    border-radius: 2px;
+    padding: 10px 20px;
+    >li {
+      list-style-type: none;
+    }
+    a {
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding-left: 24px;
+      font-size: 90%;
+      word-wrap: break-word;
+      &:before {
+        @include genericons($content: '\f107', $fontsize: 28px, $position: absolute);
+        display: block;
+        top: -4px;
+        left: -6px;
+        color: $colorBorder;
+        transform: rotateZ(10deg);
+      }
+    }
+  }
 }

@@ -1,15 +1,13 @@
 @charset "utf-8";
 
+/* -------------------------------------------------------------- */
+/* WordPress specific classes
+/* -------------------------------------------------------------- */
 @include exports("wp-classes") {
 
   // Specific classes for WordPress.
 
   @if $include-wp-specific-classes {
-
-    /* -------------------------------------------------------------- */
-    /* WordPress specific classes
-    /* -------------------------------------------------------------- */
-
     /**
      * caption
      */
