@@ -31,6 +31,8 @@ var paths = {
   'scssPath'       : 'src/scss/',
 // css
   'cssDest'        : 'assets/css/',
+// php
+  'phpFiles'       : ['*.php', '**/*.php']
 };
 
 var gulpSassConf = {
@@ -188,6 +190,7 @@ gulp.task('watch', function() {
   gulp.watch([paths.htmlDest  + '*.html'], ['bs-reload']);
   gulp.watch([paths.jadePath  + '**/*.jade'], ['jade']);
   gulp.watch([paths.jsPath    + '**/*.js'], ['jsTasks']);
+  gulp.watch([paths.phpFiles],              ['bs-reload']);
   gulp.watch([paths.scssPath  + '**/*.scss'], ['sass']);
 });
 
