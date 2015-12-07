@@ -130,6 +130,47 @@ function asknode_scripts() {
 add_action( 'wp_enqueue_scripts', 'asknode_scripts' );
 
 /**
+ * Register Google font for 'asknode'.
+ * Lato is using for sample.
+ *
+ * Replace `asknode` to your theme name or something.
+ *
+ * @return string
+ */
+function asknode_font_url() {
+	$font_url = '';
+	/*
+	 * Translators: If there are characters in your language that are not supported
+	 * by Montserrat, translate this to 'off'. Do not translate into your own language.
+	 */
+	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'asknode' ) ) {
+		$query_args = array(
+			'family' => urlencode( 'Montserrat:400,700' ),
+			'subset' => urlencode( 'latin,latin-ext' ),
+		);
+		$font_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	}
+
+	return $font_url;
+}
+
+/**
+ * Enqueue font.
+ */
+function asknode_font_scripts() {
+
+	// Montserrat Google font for asknode
+	wp_enqueue_style( 'asknode-montserrat', asknode_font_url(), array(), null );
+
+}
+add_action( 'wp_enqueue_scripts', 'asknode_font_scripts' );
+
+	// Enable support editor-style on WordPress dashboard.
+	add_editor_style( array(
+		asknode_font_url()
+	) );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

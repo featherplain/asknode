@@ -5,6 +5,7 @@ bower install https://github.com/Automattic/_s.git https://github.com/featherpla
 cp -n ./bower_components/_s/*.php ./
 cp -nr ./bower_components/_s/inc/ ./inc/
 cp -nr ./bower_components/_s/languages/ ./languages/
+cp -nr ./bower_components/_s/template-parts/ ./template-parts/
 cp -rf ./bower_components/wp-theme-ja/ja.* ./languages/
 rm -rf ./bower_components/_s
 rm -rf ./bower_compoentns/wp-theme-ja
