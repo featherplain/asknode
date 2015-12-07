@@ -1,15 +1,13 @@
 @charset "utf-8";
 
-// WordPress editor styles.
+/* -------------------------------------------------------------- */
+/* WordPress editor styles
+/* -------------------------------------------------------------- */
 @include exports("wp-editor") {
 
   @if $include-wp-editor-styles {
 
-    /* -------------------------------------------------------------- */
-    /* WordPress editor styles
-    /* -------------------------------------------------------------- */
-
-    .post__content {
+    .styleEditor {
       @include wp-editor-styles;
 
       .iconSkill {

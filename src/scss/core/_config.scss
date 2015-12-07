@@ -54,6 +54,7 @@ $fontFamilyCode     : Menlo, Consolas, Courier, sans-serif;
 // Styles
 //----------------------------------------------------------------------------
 $baseRadius         : 4px;
+$borderStyle        : 1px solid $colorBorder;
 
 //----------------------------------------------------------------------------
 // Grid
@@ -75,12 +76,21 @@ $menuPadding       : 18px; // Calclate padding size automatically
 // WordPress
 //----------------------------------------------------------------------------
 
-$include-wp-editor-styles: true;
-$include-wp-tinymce-styles: false;
-$include-wp-specific-classes: true;
+$include-wp-editor-styles    : true;
+$include-wp-tinymce-styles   : false;
+$include-wp-specific-classes : true;
 
 // editor styles
-$wp-editor-margin: 20px 0;
+// ---------------
+// h tag margin
+$editor-h-margin-sm          : 20px 0 14px 0;
+$editor-h-margin-md          : 30px 0 24px 0;
+$editor-h-margin-lg          : 40px 0 30px 0;
+
+// global margin
+$editor-margin-sm            : 14px 0 24px 0;
+$editor-margin-md            : 24px 0 34px 0;
+$editor-margin-lg            : 30px 0 40px 0;
 
 // caption
 $wp-caption-margin: rem-calc(15);
