@@ -49,6 +49,11 @@ gulp.task('install:foundation', function() {
     .pipe($.shell(['bash src/shell/foundation.sh']));
 });
 
+gulp.task('install:_s', function() {
+  return gulp.src('src/shell/', {read: false})
+    .pipe($.shell(['bash src/shell/_s.sh']));
+});
+
 /*----------------------------------------------------------------------------*/
 /* BrowserSync
 /*----------------------------------------------------------------------------*/
@@ -199,5 +204,5 @@ gulp.task('default', [
 ]);
 
 gulp.task('init', function(cb) {
-  runSequence('bower:install', 'install:foundation', cb);
+  runSequence('bower:install', 'install:foundation', 'install:foundation', cb);
 });
