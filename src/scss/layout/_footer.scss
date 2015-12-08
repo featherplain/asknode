@@ -35,7 +35,7 @@
  * siteinfo
  */
 .siteinfo {
-  padding: 32px 0;
+  padding: 12px 0;
   background-color: $colorBlack;
   font-family: $fontFamilyEn;
   -webkit-font-smoothing: antialiased;
@@ -47,7 +47,7 @@
     vertical-align: middle;
   }
   &__text {
-    margin: 32px 0;
+    margin: 12px 0;
     color: #fff;
     font-size: rem-calc(14);
     text-align: center;

@@ -40,7 +40,7 @@
 	      	</span>
 	      	<i>
 	          <svg role="img" width="4px" height="4px">
-	            <use xlink:href="/assets/images/sprite.symbol.svg#icon_circle"></use>
+	            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.symbol.svg#icon_circle"></use>
 	          </svg>
 	         </i>
 	         <span>Theme by <a href="http://asknode.net/" rel="designer">ASKNODE</a></span>

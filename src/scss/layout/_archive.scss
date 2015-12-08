@@ -4,32 +4,49 @@
 /* archive
 /* -------------------------------------------------------------- */
 
-.postArchive {}
 /**
  * post list
  */
-.postList {
+.postArchive {
   @include grid-row();
   background-color: #fff;
   padding: 14px;
+  @media #{$large-up} {
+    padding: 30px;
+  }
+  &__article {
+    background-color: #fff;
+    margin: 10px 0;
+    &--works {
+      height: 270px;
+    }
+    // media query
+    @media #{$medium-up} {
+      @include grid-column($columns: 6, $collapse: false);
+    }
+    @media #{$large-up} {
+      @include grid-column($columns: 4, $collapse: false);
+    }
+  }
   &__link {
     display: block;
+    border: 1px solid $colorBorder;
     transition: .3s;
+    min-height: 324px;
     &:hover {
       h3 {
         color: $colorPink;
       }
     }
   }
-  &__article {
-    background-color: #fff;
-    border: 1px solid $colorBorder;
-    margin: 10px 0;
-  }
   &__content {
     padding: 20px;
   }
-  &__thumb {}
+  &__thumb {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
   &__title {
     font-size: rem-calc(14);
     margin-top: 0;
@@ -38,19 +55,6 @@
   &__date {
     font-family: $fontFamilyEn;
     color: $colorPink;
-  }
-  // media query
-  @media #{$medium-up} {
-    padding: 30px;
-    &__item {
-      @include grid-column($columns: 4, $collapse: false);
-    }
-    &__article {
-      height: 324px;
-      &--works {
-        height: 270px;
-      }
-    }
   }
 }
 /**
