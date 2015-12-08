@@ -8,35 +8,24 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-			if ( is_single() ) {
-				the_title( '<h1 class="entry-title">', '</h1>' );
-			} else {
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+<article id="post-<?php the_ID(); ?>" class="postArchive__article">
+	<a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark" class="postArchive__link">
+    <div class="postArchive__thumb">
+
+			<?php // post thumbnail
+
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail( 'thumb308x180' );
 			}
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
+			else {
+				echo '<img src="' . get_template_directory_uri() . '/assets/images/thumb_noimage.png" />';
+			}
+			?>
 
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'asknode' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'asknode' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+    </div>
+    <div class="postArchive__content">
+      <h3 class="postArchive__title"><?php $title = mb_substr( $post->post_title, 0, 56); echo $title ;?></h3>
+      <time class="postArchive__date"><?php the_time( get_option( 'date_format' ) ); ?></time>
+    </div>
+	</a>
+</article>

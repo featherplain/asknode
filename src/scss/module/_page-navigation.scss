@@ -3,6 +3,24 @@
 /* -------------------------------------------------------------- */
 /* page navigation
 /* -------------------------------------------------------------- */
+
+.nav {
+  &-links {
+    @include grid-row();
+    margin: 20px 0;
+    a {
+      color: #fff;
+    }
+  }
+  &-previous {
+    @include grid-column($columns: 6, $collapse: false);
+    text-align: left;
+  }
+  &-next {
+    @include grid-column($columns: 6, $collapse: false);
+    text-align: right;;
+  }
+}
 /**
  * archive
  */
@@ -14,7 +32,7 @@
   &__item {
     @include grid-column($columns: 6, $collapse: false);
     &--prev {
-      text-align: left;
+
     }
     &--next {
       text-align: right;

@@ -40,6 +40,12 @@ function asknode_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	/*
+	 * Extra image sizes.
+	 */
+	set_post_thumbnail_size( 870, 504, true );
+	add_image_size( 'thumb308x180', 308, 180, true );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'asknode' ),
@@ -86,7 +92,7 @@ add_action( 'after_setup_theme', 'asknode_setup' );
  * @global int $content_width
  */
 function asknode_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'asknode_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'asknode_content_width', 1080 );
 }
 add_action( 'after_setup_theme', 'asknode_content_width', 0 );
 

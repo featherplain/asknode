@@ -45,9 +45,9 @@
   &__title {
     line-height: 1;
     margin: 0;
-    padding: 8px 0 14px 40px;
-    @media #{$small-only} {
-      padding: 8px 0 10px 14px;
+    padding: 8px 0 10px 14px;
+    @media #{$medium-up} {
+      padding: 8px 0 14px 40px;
     }
   }
   &__description {
@@ -81,7 +81,6 @@
   @extend %clearfix;
 }
 .gNav {
-  background-color: #fff;
   @media #{$small-only} {
     display: none;
     position: absolute;
@@ -91,14 +90,13 @@
     height: auto;
     padding: 0;
   }
-  @media #{$medium-up} {
-    height: $headerHeight;
-    float: right;
-    padding: 0 40px 0 0;
-    // front page
-    .home & {
-      background-color: transparent;
-    }
+  background-color: #fff;
+  height: $headerHeight;
+  float: right;
+  padding: 0 40px 0 0;
+  // front page
+  .home & {
+    background-color: transparent;
   }
   &--is-active {
     display: block;
@@ -111,11 +109,10 @@
     float: left;
   }
   &__item {
+    border-top: 1px solid $colorBorder;
     @media #{$medium-up} {
       float: left;
-    }
-    @media #{$small-only} {
-      border-top: 1px solid $colorBorder;
+      border: none;
     }
     >a {
       @extend %menuItem;
