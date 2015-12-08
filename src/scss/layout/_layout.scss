@@ -39,7 +39,7 @@
     }
   }
   .l-sidebar {
-    @include grid-column($columns: 4, $collapse: false);
+    // @include grid-column($columns: 4, $collapse: false);
   }
 }
 /**

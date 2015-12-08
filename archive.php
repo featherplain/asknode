@@ -11,6 +11,10 @@ get_header(); ?>
 
 	<div class="l-main">
 		<h2 class="pageTitle pageTitle--archive">BLOG</h2>
+		<p class="archiveTitle">
+			<span class="archiveTitle__inner"><?php custom_archive_title(); ?></span>
+		</p>
+
 		<div class="row">
 			<div class="postArchive">
 				<?php
@@ -37,11 +41,9 @@ get_header(); ?>
 
 		<?php
 		the_posts_navigation(array(
-		    'prev_text' => '&lt;&lt; 前へ',
-		    'next_text' => '次へ &gt;&gt;'
+		    'prev_text' => '前へ',
+		    'next_text' => '次へ'
 		)); ?>
-
-	</div><!-- / .l-main -->
 
 <?php
 get_footer();

@@ -11,6 +11,8 @@
 
 ?>
 
+	</div><!-- / .l-main -->
+
 	<footer class="l-footer">
 	  <div class="contact">
 	    <div class="contact__inner">

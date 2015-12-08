@@ -3,87 +3,49 @@
 /* -------------------------------------------------------------- */
 /* page navigation
 /* -------------------------------------------------------------- */
-
 .nav {
   &-links {
     @include grid-row();
-    margin: 20px 0;
+    background-color: #fff;
+    margin: 40px 0;
+    padding: 20px;
     a {
-      color: #fff;
+      position: relative;
+      display: inline-block;
+      color: $colorText;
+      font-size: rem-calc(12);
+      line-height: 1.4;
+      vertical-align: top;
+      &:hover {
+        color: $colorPink;
+      }
+      &:before,
+      &:after {
+        position: absolute;
+        top: 2px;
+        color: $colorPink;
+      }
     }
   }
   &-previous {
     @include grid-column($columns: 6, $collapse: false);
     text-align: left;
+    padding-left: 36px;
+    a {
+      &:before {
+        @include icomoon('\e900', 16px);
+        left: -24px;
+      }
+    }
   }
   &-next {
     @include grid-column($columns: 6, $collapse: false);
-    text-align: right;;
-  }
-}
-/**
- * archive
- */
-.archivePageNav {
-  margin: 20px 0;
-  &__list {
-    @include grid-row();
-  }
-  &__item {
-    @include grid-column($columns: 6, $collapse: false);
-    &--prev {
-
-    }
-    &--next {
-      text-align: right;
-    }
+    text-align: right;
+    padding-right: 36px;
     a {
-      color: #fff;
-    }
-  }
-}
-/**
- * single
- */
-.singlePageNav {
-  @extend %postWidth;
-  &__list {
-    @extend %clearfix;
-    margin: 40px 0;
-    background-color: #fff;
-  }
-  &__item {
-    @include grid-column($columns: 6, $collapse: false);
-    position: relative;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    line-height: 1.2;
-    &:before,
-    &:after {
-      display: inline-block;
-      position: absolute;
-      top: 26px;
-      color: $colorPink;
-    }
-    &--prev {
-      padding-left: 56px;
-      &:before {
-        @include icomoon('\e900', 28px);
-        left: 18px;
-      }
-    }
-    &--next {
-      padding-right: 56px;
       &:after {
-        @include icomoon('\e901', 28px);
-        right: 18px;
-      }
-    }
-    a {
-      color: $colorText;
-      font-size: rem-calc(12);
-      &:hover {
-        color: $colorPink;
+        @include icomoon('\e901', 16px);
+        right: -24px;
       }
     }
   }
