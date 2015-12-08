@@ -45,6 +45,9 @@ function asknode_setup() {
 	 */
 	set_post_thumbnail_size( 870, 504, true );
 	add_image_size( 'thumb308x180', 308, 180, true );
+	add_image_size( 'thumb870x504', 870, 504, true );
+	add_image_size( 'thumb870x504', 870, 504, true );
+	add_image_size( 'thumb640x140', 640, 140, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -175,6 +178,27 @@ add_action( 'wp_enqueue_scripts', 'asknode_font_scripts' );
 	add_editor_style( array(
 		asknode_font_url()
 	) );
+
+/**
+ * Get custom archive title.
+ */
+if( !function_exists( 'custom_archive_title' ) ) {
+	function custom_archive_title() {
+		if ( is_category() ) {
+
+			single_cat_title();
+
+		} elseif ( is_tag() ) {
+
+			single_tag_title();
+
+		} else {
+
+			echo 'All Posts';
+
+		}
+	}
+}
 
 /**
  * Implement the Custom Header feature.

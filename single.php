@@ -9,15 +9,16 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div class="l-main l-main--post">
+	<h2 class="pageTitle pageTitle--post">Blog</h2>
+		<div class="l-primary l-primary--post">
 
 		<?php
 		while ( have_posts() ) : the_post();
 
-			get_template_part( 'template-parts/content', get_post_format() );
+			get_template_part( 'template-parts/content-single', get_post_format() );
 
-			the_post_navigation();
+			the_post_navigation( '%title', '%title' );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -27,9 +28,7 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</div><!-- /. l-primary-->
 
 <?php
-get_sidebar();
 get_footer();

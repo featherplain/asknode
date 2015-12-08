@@ -46,7 +46,5 @@ get_header(); ?>
 		    'next_text' => '次へ &gt;&gt;'
 		)); ?>
 
-	</div><!-- / .l-main -->
-
 <?php
 get_footer();
