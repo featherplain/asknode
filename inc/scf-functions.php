@@ -20,17 +20,6 @@ function works_register_fields( $settings, $type, $id, $meta_type ) {
 	// $Setting->add_group( 'unique id', repeatable, array );
 	$Setting->add_group( 'works-meta-group', false, array(
 		array(
-			'name'  => 'scope',
-			'label' => 'SCOPE',
-			'type'  => 'check',
-			'choices' => array(
-				0 => 'design',
-				1 => 'coding',
-				2 => 'wordpress',
-				3 => 'writing'
-			),
-		),
-		array(
 			'name'    => 'client',
 			'label'   => 'CLIENT',
 			'type'    => 'text',

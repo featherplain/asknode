@@ -103,7 +103,6 @@ add_action( 'after_setup_theme', 'asknode_content_width', 0 );
  * Register Custom post types.
  */
 // WORKS
-add_action( 'init', 'post_type_works' );
 function post_type_works() {
   register_post_type( 'works',
     array(
@@ -124,8 +123,8 @@ function post_type_works() {
     )
   );
 }
+add_action( 'init', 'post_type_works' );
 // SERVICE
-add_action( 'init', 'post_type_service' );
 function post_type_service() {
   register_post_type( 'service',
     array(
@@ -138,9 +137,33 @@ function post_type_service() {
       'has_archive' => true,
       'menu_icon' => 'dashicons-art',
       'menu_position' => 5,
+      'supports' => array(
+      	'title',
+      	'editor',
+      	'thumbnail'
+      ),
     )
   );
 }
+add_action( 'init', 'post_type_service' );
+
+/**
+ * Register custom taxonomy.
+ */
+function works_taxoxomies() {
+  register_taxonomy(
+	  'scope',
+	  'works',
+	  array(
+      'label' => __( 'SCOPE' ),
+      'public' => true,
+      'rewrite' => false,
+      'hierarchical' => false,
+      'update_count_callback' => '_update_post_term_count',
+	  )
+	);
+}
+add_action( 'init', 'works_taxoxomies' );
 
 /**
  * Register widget area.

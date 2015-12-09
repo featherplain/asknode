@@ -88,19 +88,8 @@ ul {
 }
 
 dl {
-  margin-bottom: 2em;
-  &:last-child{
-    margin-bottom: 0;
-  }
-  dt {
-    margin-bottom: 1em;
-  }
   dd {
-    margin-bottom: 1em;
     margin-left: 0;
-    &:last-child{
-      margin-bottom: 0;
-    }
   }
 }
 

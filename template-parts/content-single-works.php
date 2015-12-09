@@ -10,6 +10,7 @@
 
 <?php
 
+$value_scope = get_the_terms( $post->ID, 'scope' );
 $value_client = get_post_meta( $post->ID, 'client', true );
 $value_url = get_post_meta( $post->ID, 'url', true );
 $value_code = get_post_meta( $post->ID, 'code', true );
@@ -40,26 +41,32 @@ $value_none = '<dd class="worksMeta__value">' . esc_html( '-' ) . '</dd>';
 
 				<dl class="worksMeta">
           <dt class="worksMeta__key">scope</dt>
-          <dd class="worksMeta__value"><a href="#" class="tagScope">Planning</a><a href="#" class="tagScope">Design</a><a href="#" class="tagScope">Coding</a><a href="#" class="tagScope">WordPress</a></dd>
+          <dd class="worksMeta__value">
+	          <?php if ( $value_scope ) {
+	          	the_terms( $post->ID, 'scope', '<div class="worksMeta__scope">', '', '</div>' );
+	          } else {
+	          	echo $value_none;
+	          } ?>
+          </dd>
           <dt class="worksMeta__key">client</dt>
           <?php
           if ( $value_client ) {
 						echo '<dd class="worksMeta__value">' . $value_client . '</dd>';
           } else {
           	echo $value_none;
-          }?>
+          } ?>
           <dt class="worksMeta__key">url</dt>
           <?php if ( $value_url ) {
 						echo '<dd class="worksMeta__value worksMeta__value--en"><a href="' . esc_url( $value_url ) . '" target="_blank">' . esc_html( $value_url ) . '</a></dd>';
           } else {
           	echo $value_none;
-          }?>
+          } ?>
           <dt class="worksMeta__key">code</dt>
           <?php if ( $value_code ) {
 						echo '<dd class="worksMeta__value worksMeta__value--en"><a href="' . esc_url( $value_code ) . '" target="_blank">' . esc_html( $value_code ) . '</a></dd>';
           } else {
           	echo $value_none;
-          }?>
+          } ?>
         </dl>
         <?php
         if ( !empty( $value_url ) ):

@@ -48,15 +48,16 @@
   dl {
     @extend %editorMargin;
     border: $borderStyle;
-    padding: 20px;
+    padding: 0 20px;
     font-size: 90%;
     dt {
-      margin-top: 0;
+      margin-top: 20px;
       margin-bottom: 10px;
       font-weight: bold;
     }
     dd {
       margin-top: 10px;
+      margin-bottom: 24px;
     }
   }
 
