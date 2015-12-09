@@ -9,13 +9,13 @@
  ?>
 
 <?php
-// Category label
-$cats = get_the_category();
-$catHtml = '';
-foreach ( $cats as $cat) {
-	$catHtml .= '<a href="' . get_category_link( $cat->cat_ID ) . '">' . $cat->name . '</a>';
-}
-?>
+
+$value_client = get_post_meta( $post->ID, 'client', true );
+$value_url = get_post_meta( $post->ID, 'url', true );
+$value_code = get_post_meta( $post->ID, 'code', true );
+$value_none = '<dd class="worksMeta__value">' . esc_html( '-' ) . '</dd>';
+
+ ?>
 
 <article id="post-<?php the_ID(); ?>" class="post">
 	<header class="post__header">
@@ -36,9 +36,37 @@ foreach ( $cats as $cat) {
 		<div class="post__content">
 			<div class="styleEditor">
 
-				<?php
-				the_content( '続きを読む' );
-				wp_link_pages( array(
+				<?php the_content( '続きを読む' ); ?>
+
+				<dl class="worksMeta">
+          <dt class="worksMeta__key">scope</dt>
+          <dd class="worksMeta__value"><a href="#" class="tagScope">Planning</a><a href="#" class="tagScope">Design</a><a href="#" class="tagScope">Coding</a><a href="#" class="tagScope">WordPress</a></dd>
+          <dt class="worksMeta__key">client</dt>
+          <?php
+          if ( $value_client ) {
+						echo '<dd class="worksMeta__value">' . $value_client . '</dd>';
+          } else {
+          	echo $value_none;
+          }?>
+          <dt class="worksMeta__key">url</dt>
+          <?php if ( $value_url ) {
+						echo '<dd class="worksMeta__value worksMeta__value--en"><a href="' . esc_url( $value_url ) . '" target="_blank">' . esc_html( $value_url ) . '</a></dd>';
+          } else {
+          	echo $value_none;
+          }?>
+          <dt class="worksMeta__key">code</dt>
+          <?php if ( $value_code ) {
+						echo '<dd class="worksMeta__value worksMeta__value--en"><a href="' . esc_url( $value_code ) . '" target="_blank">' . esc_html( $value_code ) . '</a></dd>';
+          } else {
+          	echo $value_none;
+          }?>
+        </dl>
+        <?php
+        if ( !empty( $value_url ) ):
+        	echo '<a href="' . esc_url( $value_url ) . '" class="btnExternal btnExternal--works" target="_blank">' . esc_html( 'Web サイトを見る' ) . '</a>';
+        endif;
+         ?>
+				<?php wp_link_pages( array(
 					'before'      => '<div class="pageLinks">',
 					'after'       => '</div>',
 					'link_before' => '<span>',

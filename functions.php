@@ -116,6 +116,11 @@ function post_type_works() {
       'has_archive' => true,
       'menu_icon' => 'dashicons-desktop',
       'menu_position' => 5,
+      'supports' => array(
+      	'title',
+      	'editor',
+      	'thumbnail'
+      ),
     )
   );
 }
@@ -254,3 +259,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load SCF functions file.
+ */
+require get_template_directory() . '/inc/scf-functions.php';
