@@ -17,7 +17,6 @@ foreach ( $cats as $cat) {
 }
 ?>
 
-
 <article id="post-<?php the_ID(); ?>" class="post">
   <header class="post__header">
     <div class="post__image">
@@ -60,7 +59,15 @@ foreach ( $cats as $cat) {
     <div class="post__content">
       <div class="styleEditor">
 
-				<?php the_content( '続きを読む' ); ?>
+				<?php
+				the_content( '続きを読む' );
+				wp_link_pages( array(
+					'before'      => '<div class="pageLinks">',
+					'after'       => '</div>',
+					'link_before' => '<span>',
+					'link_after'  => '</span>',
+					) );
+				?>
 
       </div><!-- / .styleEditor -->
 

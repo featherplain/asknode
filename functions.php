@@ -100,6 +100,44 @@ function asknode_content_width() {
 add_action( 'after_setup_theme', 'asknode_content_width', 0 );
 
 /**
+ * Register Custom post types.
+ */
+// WORKS
+add_action( 'init', 'post_type_works' );
+function post_type_works() {
+  register_post_type( 'works',
+    array(
+      'labels' => array(
+        'name' => __( 'WORKS' ),
+        'singular_name' => __( 'WORKS' ),
+        'all_items' => __( 'WORKS 一覧' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'menu_icon' => 'dashicons-desktop',
+      'menu_position' => 5,
+    )
+  );
+}
+// SERVICE
+add_action( 'init', 'post_type_service' );
+function post_type_service() {
+  register_post_type( 'service',
+    array(
+      'labels' => array(
+        'name' => __( 'SERVICE' ),
+        'singular_name' => __( 'SERVICE' ),
+        'all_items' => __( 'SERVICE 一覧' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+      'menu_icon' => 'dashicons-art',
+      'menu_position' => 5,
+    )
+  );
+}
+
+/**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
@@ -139,10 +177,7 @@ function asknode_scripts() {
 add_action( 'wp_enqueue_scripts', 'asknode_scripts' );
 
 /**
- * Register Google font for 'asknode'.
- * Lato is using for sample.
- *
- * Replace `asknode` to your theme name or something.
+ * Register Google font 'Montserrat' for asknode.
  *
  * @return string
  */

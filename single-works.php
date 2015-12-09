@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts.
+ * The template for displaying custom post type "WORKS".
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
@@ -10,20 +10,16 @@
 get_header(); ?>
 
 	<div class="l-main l-main--post">
-	<h2 class="pageTitle pageTitle--post">Blog</h2>
+	<h2 class="pageTitle pageTitle--post">WORKS</h2>
 		<div class="l-primary">
 
 		<?php
 		while ( have_posts() ) : the_post();
 
-			get_template_part( 'template-parts/content-single', get_post_format() );
+			get_template_part( 'template-parts/content-single-works', get_post_format() );
 
 			the_post_navigation( '%title', '%title' );
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
 
 		endwhile; // End of the loop.
 		?>

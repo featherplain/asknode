@@ -108,8 +108,7 @@ dl {
  * embedded content
  */
 img {
-  display: block;
-  width: 100%;
+  max-width: 100%;
   line-height: 1.0;
   border: 0;
 }

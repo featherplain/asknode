@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages.
+ * Template name: About
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -15,6 +15,7 @@
 get_header(); ?>
 
 		<div class="l-main l-main--post">
+			<h2 class="pageTitle pageTitle--post">About</h2>
 			<div class="l-primary">
 
 				<?php
@@ -29,7 +30,7 @@ get_header(); ?>
 
 				endwhile; // End of the loop.
 				?>
-			</div><!-- / .l-primary .l-primary--post -->
+			</div><!-- / .l-primary -->
 
 <?php
 get_footer();
