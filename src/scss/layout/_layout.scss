@@ -9,8 +9,7 @@
 .l-container {
   background-color: $colorPink;
   .single &,
-  .single-works &,
-  .single-service & {
+  .page & {
     background-color: $colorBg;
   }
 }
@@ -18,7 +17,6 @@
  * l-main
  */
 .l-main {
-  // @extend %baseWidth;
   @include grid-row();
   margin-top: 0;
   margin-bottom: 60px;
@@ -28,20 +26,15 @@
     }
   }
 }
-@media #{$large-up} {
-  .l-primary {
-    @include grid-column($columns: 8, $collapse: false);
-    &--post {
-      width: 100%;
-      max-width: $postWidth;
-      margin: 0 auto;
-      float: none;
-    }
-  }
-  .l-sidebar {
-    // @include grid-column($columns: 4, $collapse: false);
+.l-primary {
+  margin: 40px auto;
+  @media #{$large-up} {
+    width: 100%;
+    max-width: $postWidth;
+    float: none;
   }
 }
+.l-sidebar {}
 /**
  * grid row
  */

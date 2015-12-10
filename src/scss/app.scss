@@ -25,4 +25,7 @@
 @import 'style/*.*';
 
 // WordPress
-@import 'wp/*.*';
+@import 'wp/_wp-config.scss';
+@import 'wp/_wp-mixins.scss';
+@import 'wp/_wp-editor-style.scss';
+@import 'wp/_wp-classes.scss';

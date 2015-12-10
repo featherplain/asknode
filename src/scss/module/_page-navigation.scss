@@ -50,3 +50,17 @@
     }
   }
 }
+.pageLinks {
+  text-align: center;
+  span {
+    background-color: $colorBg;
+    margin: 0 4px;
+    padding: 8px 10px;
+  }
+  a {
+    display: inline-block;
+    line-height: 1;
+    > span {
+    }
+  }
+}
