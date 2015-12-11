@@ -124,28 +124,6 @@ function post_type_works() {
   );
 }
 add_action( 'init', 'post_type_works' );
-// SERVICE
-function post_type_service() {
-  register_post_type( 'service',
-    array(
-      'labels' => array(
-        'name' => __( 'SERVICE' ),
-        'singular_name' => __( 'SERVICE' ),
-        'all_items' => __( 'SERVICE 一覧' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'menu_icon' => 'dashicons-art',
-      'menu_position' => 5,
-      'supports' => array(
-      	'title',
-      	'editor',
-      	'thumbnail'
-      ),
-    )
-  );
-}
-add_action( 'init', 'post_type_service' );
 
 /**
  * Register custom taxonomy.

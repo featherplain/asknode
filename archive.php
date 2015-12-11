@@ -11,9 +11,9 @@ get_header(); ?>
 
 	<div class="l-main">
 		<?php if ( is_post_type_archive( 'works' ) ) {
-			echo '<h2 class="pageTitle pageTitle--archive">WORKS</h2>';
+			echo '<h2 class="pageTitle">WORKS</h2>';
 			} else {
-			echo '<h2 class="pageTitle pageTitle--archive">BLOG</h2>';
+			echo '<h2 class="pageTitle">BLOG</h2>';
 		}?>
 		<p class="archiveTitle">
 			<span class="archiveTitle__inner"><?php custom_archive_title(); ?></span>

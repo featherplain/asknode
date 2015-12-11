@@ -19,6 +19,7 @@ foreach ( $cats as $cat) {
 
 <article id="post-<?php the_ID(); ?>" class="post">
   <header class="post__header">
+    <?php the_title( '<h1 class="post__title">', '</h1>' ) ?>
     <div class="post__image">
 
     	<?php // set attachment image
@@ -47,7 +48,6 @@ foreach ( $cats as $cat) {
     </div>
   </header>
   <div class="post__body">
-    <?php the_title( '<h1 class="post__title">', '</h1>' ) ?>
     <div class="post__excerpt">
       <?php the_excerpt(); ?>
     </div>

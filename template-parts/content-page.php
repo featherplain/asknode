@@ -10,6 +10,7 @@
 
 <article id="post-<?php the_ID(); ?>" class="post">
   <header class="post__header">
+    <?php the_title( '<h1 class="post__title post__title--center">', '</h1>' ) ?>
     <div class="post__image">
 
     	<?php // set attachment image
@@ -20,27 +21,24 @@
 
     </div>
   </header>
-  <div class="post__body">
-    <?php the_title( '<h1 class="post__title post__title--center">', '</h1>' ) ?>
-    <i class="post__separator">
-      <svg role="img" width="38px" height="6px">
-        <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.symbol.svg#icon_dots"></use>
-      </svg>
-     </i>
-    <div class="post__content">
-      <div class="styleEditor">
+  <i class="post__separator">
+    <svg role="img" width="38px" height="6px">
+      <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.symbol.svg#icon_dots"></use>
+    </svg>
+   </i>
+  <div class="post__content">
+    <div class="styleEditor">
 
-				<?php
-				the_content( '続きを読む' );
-				wp_link_pages( array(
-					'before'      => '<div class="pageLinks">',
-					'after'       => '</div>',
-					'link_before' => '<span>',
-					'link_after'  => '</span>',
-					) );
-				?>
+			<?php
+			the_content( '続きを読む' );
+			wp_link_pages( array(
+				'before'      => '<div class="pageLinks">',
+				'after'       => '</div>',
+				'link_before' => '<span>',
+				'link_after'  => '</span>',
+				) );
+			?>
 
-      </div><!-- / .styleEditor -->
-    </div><!-- / .post__content -->
-  </div><!-- / .post__body -->
+    </div><!-- / .styleEditor -->
+  </div><!-- / .post__content -->
 </article><!-- / .post -->

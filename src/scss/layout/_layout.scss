@@ -7,11 +7,7 @@
  * l-container
  */
 .l-container {
-  background-color: $colorPink;
-  .single &,
-  .page & {
-    background-color: $colorBg;
-  }
+  background-color: $colorBg;
 }
 /**
  * l-main
@@ -48,12 +44,7 @@
  * page title
  */
 .pageTitle {
-  &--post {
-    @include styleTitle($colorPink, $colorPinkLighten);
-  }
-  &--archive {
-    @include styleTitle(#fff, $colorPinkDarken);
-  }
+  @include styleTitle($colorPink, $colorPinkLighten);
 }
 /**
  * screeen reader text

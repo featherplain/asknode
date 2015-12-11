@@ -6,9 +6,8 @@
 .nav {
   &-links {
     @include grid-row();
-    background-color: #fff;
     margin: 40px 0;
-    padding: 20px;
+    padding: 20px 0;
     a {
       position: relative;
       display: inline-block;
@@ -30,7 +29,7 @@
   &-previous {
     @include grid-column($columns: 6, $collapse: false);
     text-align: left;
-    padding-left: 36px;
+    padding-left: 40px;
     a {
       &:before {
         @include icomoon('\e900', 16px);
@@ -41,7 +40,7 @@
   &-next {
     @include grid-column($columns: 6, $collapse: false);
     text-align: right;
-    padding-right: 36px;
+    padding-right: 40px;
     a {
       &:after {
         @include icomoon('\e901', 16px);
