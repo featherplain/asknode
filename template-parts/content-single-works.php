@@ -20,6 +20,7 @@ $value_none = '<dd class="worksMeta__value">' . esc_html( '-' ) . '</dd>';
 
 <article id="post-<?php the_ID(); ?>" class="post">
 	<header class="post__header">
+		<?php the_title( '<h1 class="post__title post__title--center">', '</h1>' ) ?>
 		<div class="post__image">
 
 			<?php // set attachment image
@@ -31,7 +32,6 @@ $value_none = '<dd class="worksMeta__value">' . esc_html( '-' ) . '</dd>';
 			?>
 
 		</div>
-		<?php the_title( '<h1 class="post__title post__title--works"><span>', '</span></h1>' ) ?>
 	</header>
 	<div class="post__body">
 		<div class="post__content">

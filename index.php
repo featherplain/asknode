@@ -16,7 +16,6 @@ get_header(); ?>
 
 	<div class="l-main">
 		<h2 class="pageTitle pageTitle--archive">BLOG</h2>
-		<div class="row">
 			<div class="postArchive">
 				<?php
 				if ( have_posts() ) :
@@ -38,12 +37,11 @@ get_header(); ?>
 
 				endif; ?>
 			</div><!-- / .postArchive -->
-		</div><!-- / .row -->
 
 		<?php
 		the_posts_navigation(array(
-		    'prev_text' => '&lt;&lt; 前へ',
-		    'next_text' => '次へ &gt;&gt;'
+		    'prev_text' => '前へ',
+		    'next_text' => '次へ'
 		)); ?>
 
 <?php
