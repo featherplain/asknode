@@ -30,6 +30,7 @@ get_header(); ?>
 				endwhile; // End of the loop.
 				?>
 			</div><!-- / .l-primary .l-primary--post -->
+		</div><!-- / .l-main .l-main--post" -->
 
 <?php
 get_footer();

@@ -36,6 +36,19 @@
     top: 0;
     left: 0;
   }
+  // front page when admin bar is active
+  .admin-bar & {
+    top: 32px;
+    @media screen and (max-width: 782px) {
+      top: 46px;
+    }
+  }
+  // when admin bar is not active
+  .page &,
+  .single &,
+  .archive & {
+    top: 0;
+  }
 }
 /**
  * site brand
@@ -105,6 +118,13 @@
 // menu
 .gMenu {
   padding-left: 0;
+  // media queries
+  @media #{$small-only} {
+    // front page
+    .home & {
+      background-color: #fff;
+    }
+  }
   @media #{$medium-up} {
     float: left;
   }

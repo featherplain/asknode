@@ -9,10 +9,17 @@
  */
 .postArchive {
   @include grid-row();
-  // background-color: #fff;
+  &--top {
+    background-color: #fff;
+    padding: 10px;
+  }
   padding: 14px;
+  // media query
   @media #{$large-up} {
     padding: 0;
+      &--top {
+      padding: 30px;
+    }
   }
   &__article {
     margin: 10px 0;

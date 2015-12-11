@@ -17,8 +17,9 @@ get_header(); ?>
 		<div class="l-main l-main--post">
 		<h2 class="pageTitle pageTitle--archive">SERVICE</h2>
 
-		<?php get_template_part( 'template-parts/content-page-service', get_post_format() ); ?>
+			<?php get_template_part( 'template-parts/content-page-service', get_post_format() ); ?>
 
+		</div><!-- / .l-main .l-main--post" -->
 
 <?php
 get_footer();

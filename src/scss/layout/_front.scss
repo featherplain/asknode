@@ -136,9 +136,8 @@
   }
 }
 .featuredWork {
-  &__img {}
-  &__content {
-  }
+  @include grid-row();
+  padding: 20px 0;
   &__title {
     &__inner {
       color: #fff;
@@ -155,7 +154,20 @@
     line-height: 1.8;
   }
   // media query
+  @media #{$small-only} {
+    &__content {
+      padding: 0 14px;
+    }
+  }
   @media #{$medium-up} {
+    &__img {
+      @include grid-column($columns: 6, $collapse: false);
+    }
+    &__content {
+      @include grid-column($columns: 6, $collapse: false);
+    }
+  }
+  @media #{$large-up} {
     &__img {
       @include grid-column($columns: 8, $collapse: false);
     }
