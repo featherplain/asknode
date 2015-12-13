@@ -93,6 +93,9 @@
   &__btnWrap {
     margin: 14px 0;
     text-align: center;
+    @media #{$small-only} {
+      display: none;
+    }
   }
   .fb-like {
     @media #{$small-only} {

@@ -17,6 +17,7 @@
         var $toggledMenu = $('.gNav');
 
         $toggleBtn.on('click', function(e) {
+          console.log('click');
           e.preventDefault();
 
           $toggleBtn.toggleClass('gNav--is-active');
@@ -39,13 +40,19 @@
     var dropdown = {
       init: function() {
         var $dropdown = $('.gMenu__item--has-child');
+        var notHover = true;
 
-        $dropdown.hover(function() {
-          $('>.js-dropdown', this).slideDown();
-        },
-        function() {
-          $('>.js-dropdown', this).slideUp();
-        });
+        var action = $(window).width() > 640 ? 'hover' : 'click';
+
+        $dropdown.on(action, function() {
+          if(notHover) {
+            $(this).find('>.js-dropdown').fadeIn(260);
+            notHover = false;
+          } else {
+            $(this).find('>.js-dropdown').fadeOut(260);
+            notHover = true;
+          }
+        }).bind(this);
       }
     };
     dropdown.init();
