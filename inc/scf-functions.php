@@ -12,6 +12,10 @@
  * @param string $meta_type post | user
  * @return array
  */
+
+/**
+ * works meta information
+ */
 function works_register_fields( $settings, $type, $id, $meta_type ) {
 
 	// SCF::add_setting( 'unique id', 'metabox title' );
@@ -43,3 +47,44 @@ function works_register_fields( $settings, $type, $id, $meta_type ) {
 	return $settings;
 }
 add_filter( 'smart-cf-register-fields', 'works_register_fields', 10, 4 );
+
+/**
+ * service summary
+ */
+function service_register_fields( $settings, $type, $id, $meta_type ) {
+
+	// SCF::add_setting( 'unique id', 'metabox title' );
+	$Setting = SCF::add_setting( 'service-summary', 'Service Summary' );
+
+	// $Setting->add_group( 'unique id', repeatable, array );
+	$Setting->add_group( 'service-summary-group', false, array(
+		array(
+			'name'    => 'design',
+			'label'   => 'DESIGN Summary',
+			'type'    => 'textarea',
+			'default' => '',
+		),
+		array(
+			'name'    => 'coding',
+			'label'   => 'CODING Summary',
+			'type'    => 'textarea',
+			'default' => '',
+		),
+		array(
+			'name'    => 'wordpress',
+			'label'   => 'WordPress Summary',
+			'type'    => 'textarea',
+			'default' => '',
+		),
+		array(
+			'name'    => 'writing',
+			'label'   => 'Writing Summary',
+			'type'    => 'textarea',
+			'default' => '',
+		),
+	) );
+
+	$settings[] = $Setting;
+	return $settings;
+}
+add_filter( 'smart-cf-register-fields', 'service_register_fields', 10, 4 );
