@@ -9,55 +9,29 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div class="l-main">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'asknode' ); ?></h1>
-				</header><!-- .page-header -->
+		<h2 class="pageTitle pageTitle--404">404</h2>
+		<div class="l-primary">
+			<div class="notFound">
+				<div class="styleEditor">
+					<h2>ページが見つかりませんでした。</h2>
+					<h3>お探しのページはいずれかの理由により見つかりませんでした。</h3>
+					<ol>
+						<li>ページの URL が変更された可能性があります。</li>
+						<li>ページが削除された可能性があります。</li>
+						<li>ページの URL をミスタイプしている可能性があります。入力した URL が正しいかご確認ください。</li>
+					</ol>
+					<h3>検索をためす</h3>
+					<?php the_widget( 'WP_Widget_Search' ); ?>
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'asknode' ); ?></p>
+					<h3>ホームへ戻る</h3>
+					<a class="btnGhost btnGhost--fullWidth" href="./">ホームへ</a>
+				</div>
+			</div><!-- / .notFound -->
 
-					<?php
-						get_search_form();
-
-						the_widget( 'WP_Widget_Recent_Posts' );
-
-						if ( _s_categorized_blog() ) : // Only show the widget if site has multiple categories.
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'asknode' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-						endif;
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'asknode' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</div><!-- / .l-primary -->
+	</div><!-- / .l-main -->
 
 <?php
 get_footer();

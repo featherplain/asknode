@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------- */
+/* 404
+/* -------------------------------------------------------------- */
+/**
+ * 404
+ */
+.notFound {
+  background-color: #fff;
+  padding: 20px;
+  @media #{$medium-up} {
+    padding: 40px;
+  }
+  &__description {
+    text-align: center;
+  }
+}

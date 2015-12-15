@@ -68,3 +68,18 @@
     );
   }
 }
+/**
+ * ghost
+ */
+.btnGhost {
+  @include btnGhost(
+    $color: $colorPink,
+    $colorHover: #fff,
+    $fontSize: 16px,
+    $padding: 12px 14px,
+    $radius: true
+  );
+  &--fullWidth {
+    width: 100%;
+  }
+}
