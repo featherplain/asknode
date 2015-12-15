@@ -40,6 +40,12 @@ var gulpSassConf = {
   outputStyle   : 'compressed'
 };
 
+var opt = {
+  'bs' : {
+    'browser'    : 'google chrome canary'
+  }
+};
+
 /*----------------------------------------------------------------------------*/
 /* initializing bower_components
 /*----------------------------------------------------------------------------*/
@@ -62,6 +68,8 @@ gulp.task('install:_s', function() {
 
 gulp.task('browser-sync', function() {
   var args = {};
+  var args = opt.bs;
+
   if (argv.mode == 'server' ) {
     args.server =  { baseDir: paths.root };
     args.startPath = paths.htmlDest;

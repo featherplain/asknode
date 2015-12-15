@@ -45,6 +45,9 @@
  */
 .pageTitle {
   @include styleTitle($colorPink, $colorPinkLighten);
+  &--404 {
+    font-size: rem-calc(200);
+  }
 }
 /**
  * screeen reader text
