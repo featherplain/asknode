@@ -29,25 +29,19 @@
   background-color: #fff;
   z-index: 12;
   // front page
-  .home & {
+  &--home {
     background-color: transparent;
     z-index: 12;
     position: absolute;
     top: 0;
     left: 0;
-  }
-  // front page when admin bar is active
-  .admin-bar & {
-    top: 32px;
-    @media screen and (max-width: 782px) {
-      top: 46px;
+    // front page when admin bar is active
+    .admin-bar & {
+      top: 32px;
+      @media screen and (max-width: 782px) {
+        top: 46px;
+      }
     }
-  }
-  // when admin bar is not active
-  .page &,
-  .single &,
-  .archive & {
-    top: 0;
   }
 }
 /**

@@ -1,14 +1,15 @@
 <?php
 /**
- * The template for displaying front page.
+ * Template Name: Front Page
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package asknode
  */
-get_header(); ?>
+get_header( 'home' ); ?>
 
-<div class="l-container">
+<?php while ( have_posts() ) : the_post(); ?>
+
 	<div class="mainImg">
     <div class="mainImg__inner">
       <h1 class="mainImg__title"><?php bloginfo( 'name' ); ?></h1>
@@ -26,7 +27,7 @@ get_header(); ?>
     <div class="featuredWork">
       <div class="featuredWork__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img_amethyst.png" alt=""></div>
       <div class="featuredWork__content">
-        <h3 class="featuredWork__title"><span class="featuredWork__title__inner">Amethyst</span><a href="#">&gt;&gt; くわしく</a></h3>
+        <h3 class="featuredWork__title"><span class="featuredWork__title__inner">Amethyst</span><a href="/works/amethyst/">&gt;&gt; くわしく</a></h3>
         <p class="featuredWork__excerpt">WordPress.org の公式テーマディレクトリ掲載テーマとして申請中のテーマです。すべてのデバイスにおける可読性と視認性を重視した、シンプルなテーマです。CSS フレームワークの Foundation を採用し、 Sass によるカスタマイズも簡単に。</p><a href="http://amethyst.asknode.net/" target="_blank" class="btnExternal">デモサイトをみる</a>
       </div>
     </div>
@@ -55,6 +56,8 @@ get_header(); ?>
 
     </div>
   </div><!-- / .topWorks -->
+
+<?php endwhile; ?>
 
 <?php
 get_footer();

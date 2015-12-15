@@ -27,8 +27,7 @@
  * main image
  */
 .mainImg {
-  position: relative;
-  background: url($imgPath + "img_main.jpg") no-repeat center center;
+  background: url($imgPath + "img_main.jpg") no-repeat 0 0;
   background-size: cover;
   height: 400px;
   &__inner {
