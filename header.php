@@ -22,7 +22,11 @@
 
 <body <?php body_class(); ?>>
 <div class="l-container">
-  <header role="banner" class="l-header">
+	<?php if ( is_front_page() ) {
+		echo '<header role="banner" class="l-header l-header--home">';
+	} else {
+		echo '<header role="banner" class="l-header">';
+	} ?>
   	<div class="siteBrand">
 	    <h1 class="siteBrand__title">
 	    	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a>
