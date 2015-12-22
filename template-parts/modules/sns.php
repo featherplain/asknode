@@ -44,9 +44,12 @@ $url = get_template_directory_uri();
 			</a>
 		</li>
 		<li class="snsShare__item">
-			<div class="btnShare btnShare--po">
-				<a href="https://getpocket.com/save" data-lang="ja" data-pocket-count="none" data-pocket-label="pocket" class="pocket-btn"></a>
-			</div>
+			<a href="https://getpocket.com/edit?url=<?php echo urlencode( get_permalink() ); ?>&amp;title=<?php echo urlencode( get_the_title() ); ?>" data-lang="ja" data-pocket-count="none" data-pocket-label="pocket" class="btnShare btnShare--po">
+				<svg role="img" width="20px" height="16px" class="btnShare__icon">
+					<use xlink:href="<?php echo $url;?>/assets/images/sprite.symbol.svg#icon_po"></use>
+				</svg>
+				<span class="btnShare__text">あとで読む</span>
+			</a>
 		</li>
 	</ul><!-- / .snsShare__list -->
 </div><!-- / .snsShare -->
