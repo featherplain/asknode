@@ -509,7 +509,7 @@ $cursor-text-value: text !default;
       line-height: $base-line-height; // Set to $base-line-height to take on browser default of 150%
       margin: 0;
       padding: 0;
-      position: relative;
+      // position: relative;
     }
 
   a:hover { cursor: $cursor-pointer-value; }
