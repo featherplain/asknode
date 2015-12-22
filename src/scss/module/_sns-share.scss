@@ -7,6 +7,11 @@
   width: 100%;
   max-width: 650px;
   margin: 40px 0;
+  &__title {
+    font-weight: normal;
+    text-align: center;
+    color: $colorPinkDarken;
+  }
   &__list {
     margin: 0;
     display: flex;

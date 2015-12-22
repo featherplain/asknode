@@ -10,22 +10,13 @@
 $url = get_template_directory_uri();
 ?>
 
+<i class="post__separator">
+  <svg role="img" width="38px" height="6px">
+    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.symbol.svg#icon_dots"></use>
+  </svg>
+</i>
 <div id="js-sns" class="snsShare">
-
-	<?php // set attachment image
-	if ( has_post_thumbnail() ) {
-		echo '<div style="background-image: url(' . $url . the_post_thumbnail( 'thumb640x140' ) . '" class="fbLike">';
-	} else {
-		echo '<div style="background-image: url(' . $url . '/assets/images/img_noimage.png);" class="fbLike">';
-	}
-  ?>
-		<div class="fbLike__overlay">
-			<?php the_title( '<h3 class="fbLike__title">', '</h3>' ); ?>
-			<div class="fbLike__btnWrap">
-				<div class="fb-like"></div>
-			</div>
-		</div>
-	</div><!-- / .fbLike -->
+	<h3 class="snsShare__title">この記事をシェアする</h3>
 	<ul class="snsShare__list">
 		<li class="snsShare__item">
 			<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>" class="btnShare btnShare--fb js-share-fb">
@@ -53,9 +44,12 @@ $url = get_template_directory_uri();
 			</a>
 		</li>
 		<li class="snsShare__item">
-			<div class="btnShare btnShare--po">
-				<a href="https://getpocket.com/save" data-lang="ja" data-pocket-count="none" data-pocket-label="pocket" class="pocket-btn"></a>
-			</div>
+			<a href="https://getpocket.com/edit?url=<?php echo urlencode( get_permalink() ); ?>&amp;title=<?php echo urlencode( get_the_title() ); ?>" data-lang="ja" data-pocket-count="none" data-pocket-label="pocket" class="btnShare btnShare--po">
+				<svg role="img" width="20px" height="16px" class="btnShare__icon">
+					<use xlink:href="<?php echo $url;?>/assets/images/sprite.symbol.svg#icon_po"></use>
+				</svg>
+				<span class="btnShare__text">あとで読む</span>
+			</a>
 		</li>
 	</ul><!-- / .snsShare__list -->
 </div><!-- / .snsShare -->
