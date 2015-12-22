@@ -27,25 +27,33 @@
     }
   }
   &-previous {
-    @include grid-column($columns: 6, $collapse: false);
     text-align: left;
-    padding-left: 40px;
+    margin: 10px 0;
+    padding-left: 30px;
+    padding-right: 20px;
     a {
       &:before {
         @include icomoon('\e900', 16px);
         left: -24px;
       }
     }
+    @media #{$medium-up} {
+      float: left;
+    }
   }
   &-next {
-    @include grid-column($columns: 6, $collapse: false);
     text-align: right;
-    padding-right: 40px;
+    margin: 10px 0;
+    padding-left: 20px;
+    padding-right: 30px;
     a {
       &:after {
         @include icomoon('\e901', 16px);
         right: -24px;
       }
+    }
+    @media #{$medium-up} {
+      float: right;
     }
   }
 }

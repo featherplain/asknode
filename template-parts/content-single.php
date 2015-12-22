@@ -19,43 +19,26 @@ foreach ( $cats as $cat) {
 
 <article id="post-<?php the_ID(); ?>" class="post">
   <header class="post__header">
-    <?php the_title( '<h1 class="post__title">', '</h1>' ) ?>
-    <div class="post__image">
-
-    	<?php // set attachment image
-    	if ( has_post_thumbnail() ) {
-    		the_post_thumbnail( 'thumb870x504' );
-    	} else {
-    		echo '<img src="' . get_template_directory_uri() . '/assets/images/img_noimage.png" />';
-    	}
-    	?>
-
-    </div>
     <div class="post__meta">
       <time><?php the_time( get_option( 'date_format' ) ); ?></time>
-      <i>
-        <svg role="img" width="6px" height="6px">
-          <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.symbol.svg#icon_circle"></use>
-        </svg>
-      </i>
-      <span> <?php echo $catHtml; ?> </span>
-     	<i>
-        <svg role="img" width="6px" height="6px">
-          <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.symbol.svg#icon_circle"></use>
-        </svg>
-      </i>
-      <span>by <?php echo get_the_author_meta( 'display_name' ); ?></span>
+      <span><?php echo $catHtml; ?></span>
     </div>
-  </header>
-  <div class="post__body">
+    <?php the_title( '<h1 class="post__title">', '</h1>' ) ?>
     <div class="post__excerpt">
       <?php the_excerpt(); ?>
     </div>
-    <i class="post__separator">
-      <svg role="img" width="38px" height="6px">
-        <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.symbol.svg#icon_dots"></use>
-      </svg>
-    </i>
+	  <i class="post__separator">
+	    <svg role="img" width="38px" height="6px">
+	      <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.symbol.svg#icon_dots"></use>
+	    </svg>
+	  </i>
+  </header>
+	<?php if ( has_post_thumbnail() ): ?>
+		<div class="post__image">
+			<?php the_post_thumbnail( 'thumb870x504' ); ?>
+		</div>
+	<?php endif ; ?>
+  <div class="post__body">
     <div class="post__content">
       <div class="styleEditor">
 

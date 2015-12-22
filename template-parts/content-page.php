@@ -11,15 +11,11 @@
 <article id="post-<?php the_ID(); ?>" class="post">
   <header class="post__header">
     <?php the_title( '<h1 class="post__title post__title--center">', '</h1>' ) ?>
-    <div class="post__image">
-
-    	<?php // set attachment image
-    	if ( has_post_thumbnail() ) :
-    		the_post_thumbnail( 'thumb870x504' );
-    	endif;
-    	?>
-
-    </div>
+    <?php if ( has_post_thumbnail() ): ?>
+			<div class="post__image">
+				<?php the_post_thumbnail( 'thumb870x504' ); ?>
+			</div>
+		<?php endif ; ?>
   </header>
   <i class="post__separator">
     <svg role="img" width="38px" height="6px">
