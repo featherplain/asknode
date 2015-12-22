@@ -6,7 +6,7 @@
 
         this.open();
 
-        var url = 'http://graph.facebook.com/?id=' + encodeURIComponent(location.href);
+        var url = '//graph.facebook.com/?id=' + encodeURIComponent(location.href);
         $.ajax({
           url: url,
           dataType: 'jsonp',
@@ -39,7 +39,7 @@
 
         this.open();
 
-        var url = 'http://api.b.st-hatena.com/entry.count?url=' + encodeURIComponent(location.href);
+        var url = '//api.b.st-hatena.com/entry.count?url=' + encodeURIComponent(location.href);
         $.ajax({
           url: url,
           dataType: 'jsonp',
