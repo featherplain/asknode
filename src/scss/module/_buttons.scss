@@ -3,7 +3,22 @@
 /* -------------------------------------------------------------- */
 /* buttons
 /* -------------------------------------------------------------- */
-
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"]::-webkit-file-upload-button,
+button {
+  @include btn(
+    $colorBg: $colorPink,
+    $color: #ffffff,
+    $fontSize: rem-calc(16),
+    $padding: 14px 0,
+    $radius: true,
+    $boxShadow: true,
+    $fullWidth: true
+  );
+  border: none;
+}
 /**
  * contact
  */
