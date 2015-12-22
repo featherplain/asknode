@@ -38,7 +38,6 @@
     }
   }
 
-
   p {
     @extend %editorMargin;
   }
@@ -63,16 +62,39 @@
 
   ul, ol {
     @extend %editorMargin;
-    padding-left: 24px;
     li {
       margin: 16px 0;
       line-height: 1.5;
     }
   }
-
   ul {
+    padding-left: 24px;
     li {
       list-style-type: circle;
+    }
+  }
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: number;
+    li {
+      position: relative;
+      padding-left: 40px;
+      &:before {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $colorBg;
+        border-radius: 50%;
+        counter-increment: number;
+        content: counter(number);
+        font-size: 85%;
+        line-height: 1;
+        margin-right: 8px;
+        padding: 8px 10px;
+      }
     }
   }
 
@@ -103,7 +125,7 @@
     background-color: $colorBg;
     border-radius: 4px;
     font-family: $fontFamilyCode;
-    font-size: 90%;
+    font-size: 80%;
   }
 
   code,
@@ -146,7 +168,6 @@
     @extend %editorMargin;
     width: 100%;
     font-size: 90%;
-    border: $borderStyle;
     thead {
       font-weight: normal;
       border-bottom: $borderStyle;
@@ -157,21 +178,20 @@
     tbody {
       word-wrap: break-word;
       tr {
-        &:nth-child(even) {
-          background-color: lighten($colorBg, 2%);
-        }
-        &:nth-child(odd) {
-          background-color: #fff;
+        border-top: $borderStyle;
+        &:last-child {
+          border-bottom: $borderStyle;
         }
       }
       th {
-        color: $colorPink;
         font-weight: normal;
+        text-align: left;
+
       }
     }
     th,
     td {
-      padding: 4px 6px;
+      padding: 10px 14px;
       word-wrap: break-all;
     }
   }
