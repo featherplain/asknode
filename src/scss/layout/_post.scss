@@ -13,10 +13,8 @@
   @media #{$large-up} {
     padding: 60px;
   }
-  &__header {
-    position: relative;
-  }
   &__image {
+    border: 2px solid $colorBg;
     img {
       display: block;
       width: 100%;
@@ -26,31 +24,13 @@
     }
   }
   &__meta {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    min-height: 48px;
-    padding: 16px 18px;
-    background-color: rgba(0,0,0,.6);
-    color: #fff;
+    margin: 16px 0;
     font-family: $fontFamilyEn;
-    font-size: rem-calc(12);
+    font-size: rem-calc(11);
     letter-spacing: 1.4px;
     text-transform: uppercase;
-    z-index: 2;
     a {
-      color: #fff;
-    }
-    i {
-      display: inline-block;
-      margin: 0 6px;
-      vertical-align: baseline;
-      svg {
-        width: 3px;
-        height: auto;
-        margin: 3px 0;
-      }
+      color: $colorPink;
     }
   }
   &__title {
@@ -61,30 +41,17 @@
     &--center {
       text-align: center;
     }
-    // &--works {
-    //   margin: 0;
-    //   position: absolute;
-    //   left: 0;
-    //   bottom: 0;
-    //   width: 100%;
-    //   padding: 16px 18px;
-    //   background-color: rgba(0,0,0,.6);
-    //   text-align: center;
-    //   z-index: 2;
-    //   > span {
-    //     margin: 0;
-    //     font-size: rem-calc(14);
-    //     font-weight: normal;
-    //     color: #fff;
-    //   }
-    // }
   }
   &__separator {
     display: block;
     width: 38px;
-    margin: 40px auto;
+    margin: 20px auto;
   }
-  &__excerpt,
+  &__excerpt {
+    color: $colorSub;
+    font-size: rem-calc(14);
+    line-height: 1.6;
+  }
   &__content {
     color: $colorText;
     margin: 30px 0;
@@ -95,13 +62,7 @@
   // media query
   @media #{$medium-up} {
     &__meta {
-      font-size: rem-calc(18);
-      i {
-        svg {
-          width: 6px;
-          height: auto;
-        }
-      }
+      font-size: rem-calc(16);
     }
     &__title {
       font-size: rem-calc(28);
@@ -113,7 +74,9 @@
         }
       }
     }
-    &__excerpt,
+    &__excerpt {
+      font-size: rem-calc(16);
+    }
     &__content {
       margin: 40px 0;
       padding: 0 50px;
