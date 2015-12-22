@@ -55,7 +55,7 @@ foreach ( $cats as $cat) {
       <svg role="img" width="38px" height="6px">
         <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.symbol.svg#icon_dots"></use>
       </svg>
-     </i>
+    </i>
     <div class="post__content">
       <div class="styleEditor">
 
@@ -71,7 +71,7 @@ foreach ( $cats as $cat) {
 
       </div><!-- / .styleEditor -->
 
-			<?php get_template_part( 'template-parts/content-sns' ); ?>
+			<?php get_template_part( 'template-parts/modules/sns' ); ?>
 
     </div>
   </div><!-- / .post__body -->

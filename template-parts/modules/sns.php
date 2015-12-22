@@ -10,22 +10,13 @@
 $url = get_template_directory_uri();
 ?>
 
+<i class="post__separator">
+  <svg role="img" width="38px" height="6px">
+    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.symbol.svg#icon_dots"></use>
+  </svg>
+</i>
 <div id="js-sns" class="snsShare">
-
-	<?php // set attachment image
-	if ( has_post_thumbnail() ) {
-		echo '<div style="background-image: url(' . $url . the_post_thumbnail( 'thumb640x140' ) . '" class="fbLike">';
-	} else {
-		echo '<div style="background-image: url(' . $url . '/assets/images/img_noimage.png);" class="fbLike">';
-	}
-  ?>
-		<div class="fbLike__overlay">
-			<?php the_title( '<h3 class="fbLike__title">', '</h3>' ); ?>
-			<div class="fbLike__btnWrap">
-				<div class="fb-like"></div>
-			</div>
-		</div>
-	</div><!-- / .fbLike -->
+	<h3 class="snsShare__title">この記事をシェアする</h3>
 	<ul class="snsShare__list">
 		<li class="snsShare__item">
 			<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode( get_permalink() ); ?>" class="btnShare btnShare--fb js-share-fb">
