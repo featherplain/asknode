@@ -11,23 +11,23 @@
 		<p class="widgetAuthor__user"><?php the_author_meta( 'display_name' ); ?></p>
 		<p class="widgetAuthor__description"><?php the_author_meta( 'description' ); ?></p>
 		<ul class="inlineList socialLinks">
-			<li>
+			<!-- <li> -->
 				<?php // twitter
 
-					$icon = '';
+					// $icon = '';
 
-					if ( get_the_author_meta( 'twitter' ) ) {
+					// if ( get_the_author_meta( 'twitter' ) ) {
 
-						$html = '<a href="https://twitter.com/' . get_the_author_meta( 'twitter' ) . '" target="_blank">';
-						$html .= $icon;
-						$html .= '</a>';
+					// 	$html = '<a href="https://twitter.com/' . get_the_author_meta( 'twitter' ) . '" target="_blank">';
+					// 	$html .= $icon;
+					// 	$html .= '</a>';
 
-					} else {
-						$html = '<span>' . $icon . '</span>';
-					}
-					echo $html;
+					// } else {
+					// 	$html = '<span>' . $icon . '</span>';
+					// }
+					// echo $html;
 				 ?>
-			</li>
+			<!-- </li> -->
 			<li>
 				<?php // facebook
 
@@ -97,7 +97,7 @@
 				 ?>
 			<!-- </li> -->
 			<li><a href="https://profiles.wordpress.org/featherplain/"><span class="readerOnly">WordPress</span></a></li>
-			<li><a href="https://instagram.com/featherplain/"><span class="readerOnly">Instagram</span></a></li>
+			<!-- <li><a href="https://instagram.com/featherplain/"><span class="readerOnly">Instagram</span></a></li> -->
 		</ul>
 		<a href="/about/" class="btnFull">About</a>
 	</div>
