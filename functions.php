@@ -151,11 +151,11 @@ add_action( 'init', 'works_taxoxomies' );
 function asknode_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'asknode' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'sidebar',
 		'description'   => '',
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget__title">',
 		'after_title'   => '</h2>',
 	) );
 }
@@ -265,3 +265,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load SCF functions file.
  */
 require get_template_directory() . '/inc/scf-functions.php';
+
+/**
+ * Load user profile functions file.
+ */
+require get_template_directory() . '/inc/user-functions.php';

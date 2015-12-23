@@ -7,11 +7,14 @@
  * @package asknode
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar( 'sidebar' ) ) {
 	return;
 }
 ?>
 
-<aside id="secondary" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+<aside class="l-sidebar" role="complementary">
+	<?php if ( is_single() ) : ?>
+		<?php get_template_part( 'template-parts/modules/widget-author' ); ?>
+	<?php endif ; ?>
+	<?php dynamic_sidebar( 'sidebar' ); ?>
+</aside><!-- / .l-sidebar -->

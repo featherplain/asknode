@@ -11,6 +11,8 @@ get_header(); ?>
 
 	<div class="l-main l-main--post">
 	<h2 class="pageTitle">Blog</h2>
+
+
 		<div class="l-primary">
 
 		<?php
@@ -28,7 +30,10 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 
-		</div><!-- /. l-primary-->
+		</div><!-- /. l-primary -->
+
+		<?php get_sidebar(); ?>
+
 	</div><!-- / .l-main .l-main--post" -->
 
 <?php
