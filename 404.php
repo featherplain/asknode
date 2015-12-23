@@ -12,7 +12,7 @@ get_header(); ?>
 	<div class="l-main">
 
 		<h2 class="pageTitle pageTitle--404">404</h2>
-		<div class="l-primary">
+		<div class="l-single-column">
 			<div class="notFound">
 				<div class="styleEditor">
 					<h2>ページが見つかりませんでした。</h2>
@@ -30,7 +30,7 @@ get_header(); ?>
 				</div>
 			</div><!-- / .notFound -->
 
-		</div><!-- / .l-primary -->
+		</div><!-- / .l-single-column -->
 	</div><!-- / .l-main -->
 
 <?php

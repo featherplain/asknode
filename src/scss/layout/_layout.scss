@@ -23,19 +23,24 @@
   }
 }
 .l-primary {
-  margin: 40px auto;
   @media #{$large-up} {
-    width: 100%;
-    max-width: $postWidth;
-    float: none;
+    @include grid-column($columns: 9, $collapse: false);
   }
 }
-.l-sidebar {}
+.l-sidebar {
+  @media #{$large-up} {
+    @include grid-column($columns: 3, $collapse: false);
+  }
+}
+.l-single-column {
+  @include row(870px);
+  margin: 40px auto;
+}
 /**
  * grid row
  */
 .row {
-  @include grid-row();
+  @include row($rowWidth);
   @media #{$small-only} {
     padding: 0 10px;
   }

@@ -1,17 +1,17 @@
 @charset "utf-8";
 
 /* -------------------------------------------------------------- */
-/* module classes for WordPress editor
+/* utilitiy classes
 /* -------------------------------------------------------------- */
-.styleEditor {
+// .styleEditor {
   /**
    * inline list
    */
   .inlineList {
-    padding-left: 0;
+    padding-left: 0 !important;
     li {
       display: inline-block;
-      margin: 6px 2px;
+      margin: 6px 2px !important;
       list-style-type: none;
       line-height: 1;
     }
@@ -125,4 +125,4 @@
       }
     }
   }
-}
+// }

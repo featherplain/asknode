@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<div class="l-main l-main--post">
 	<h2 class="pageTitle">WORKS</h2>
-		<div class="l-primary">
+		<div class="l-single-column">
 
 		<?php
 		while ( have_posts() ) : the_post();
@@ -24,7 +24,7 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 
-		</div><!-- /. l-primary-->
+		</div><!-- /. l-single-column -->
 	</div class="l-main l-main--post">
 
 <?php
