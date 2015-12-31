@@ -10,11 +10,6 @@
 $url = get_template_directory_uri();
 ?>
 
-<i class="post__separator">
-  <svg role="img" width="38px" height="6px">
-    <use xlink:href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.symbol.svg#icon_dots"></use>
-  </svg>
-</i>
 <div id="js-sns" class="snsShare">
 	<h3 class="snsShare__title">この記事をシェアする</h3>
 	<ul class="snsShare__list">

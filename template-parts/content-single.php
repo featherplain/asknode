@@ -54,7 +54,6 @@ foreach ( $cats as $cat) {
 
       </div><!-- / .styleEditor -->
 
-			<?php get_template_part( 'template-parts/modules/sns' ); ?>
 
     </div>
   </div><!-- / .post__body -->
