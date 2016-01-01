@@ -24,7 +24,9 @@
   &__article {
     margin: 10px 0;
     &--works {
-      height: 280px;
+      @media #{$medium-up} {
+        height: 260px;
+      }
     }
     // media query
     @media #{$medium-up} {

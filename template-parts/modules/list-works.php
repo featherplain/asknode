@@ -7,7 +7,7 @@
 ?>
 
 <a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark" class="postArchive__link">
-	<article id="post-<?php the_ID(); ?>" class="postArchive__article postARchive__article--works">
+	<article id="post-<?php the_ID(); ?>" class="postArchive__article postArchive__article--works">
     <div class="postArchive__thumb">
 
 			<?php // post thumbnail
