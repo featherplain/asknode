@@ -11,31 +11,21 @@ get_header(); ?>
 
 	<div class="l-main">
 		<h2 class="pageTitle">WORKS</h2>
-		<p class="archiveTitle">
-			<span class="archiveTitle__inner"><?php custom_archive_title(); ?></span>
-		</p>
-
 		<div class="row">
 			<div class="postArchive">
-				<?php
-				if ( have_posts() ) :
+				<?php if ( have_posts() ) : ?>
 
-					while ( have_posts() ) : the_post(); // Start the Loop
+					<?php while ( have_posts() ) : the_post(); // Start the Loop ?>
 
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'template-parts/content', get_post_format() );
+						<?php get_template_part( 'template-parts/modules/list-works' ); ?>
 
-					endwhile; // End the Loop
+					<?php endwhile; // End the Loop ?>
 
-				else :
+				<?php else : ?>
 
 					get_template_part( 'template-parts/content', 'none' );
 
-				endif; ?>
+				<?php endif; ?>
 			</div><!-- / .postArchive -->
 		</div><!-- / .row -->
 

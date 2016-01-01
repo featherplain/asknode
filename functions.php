@@ -235,7 +235,7 @@ if( !function_exists( 'custom_archive_title' ) ) {
 
 		} else {
 
-			echo 'All Posts';
+			echo '';
 
 		}
 	}

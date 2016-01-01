@@ -28,7 +28,7 @@ get_header( 'home' ); ?>
       <div class="featuredWork__img"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/img_amethyst.png" alt=""></div>
       <div class="featuredWork__content">
         <h3 class="featuredWork__title"><span class="featuredWork__title__inner">Amethyst</span><a href="/works/amethyst/">&gt;&gt; くわしく</a></h3>
-        <p class="featuredWork__excerpt">WordPress.org の公式テーマディレクトリ掲載テーマとして申請中のテーマです。すべてのデバイスにおける可読性と視認性を重視した、シンプルなテーマです。CSS フレームワークの Foundation を採用し、 Sass によるカスタマイズも簡単に。</p><a href="http://amethyst.asknode.net/" target="_blank" class="btnExternal">デモサイトをみる</a>
+        <p class="featuredWork__excerpt">WordPress.org の公式テーマディレクトリ掲載テーマです。すべてのデバイスにおける可読性と視認性を重視した、シンプルなテーマです。CSS フレームワークの Foundation を採用し、 Sass によるカスタマイズも簡単に。</p><a href="http://amethyst.asknode.net/" target="_blank" class="btnExternal">デモサイトをみる</a>
       </div>
     </div>
     <div class="row">
@@ -42,7 +42,7 @@ get_header( 'home' ); ?>
 
 					while ( $loop->have_posts() ) : $loop->the_post(); // Start the Loop
 
-						get_template_part( 'template-parts/content', get_post_format() );
+						get_template_part( 'template-parts/modules/list-works' );
 
 					endwhile; // End the Loop
 
