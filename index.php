@@ -29,6 +29,12 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 
+		<?php
+			the_posts_navigation(array(
+			    'prev_text' => '前へ',
+			    'next_text' => '次へ'
+			)); ?>
+
 		</div><!-- /. l-primary -->
 
 		<?php get_sidebar(); ?>

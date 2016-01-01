@@ -12,7 +12,7 @@
       position: relative;
       display: inline-block;
       color: $colorText;
-      font-size: rem-calc(12);
+      font-size: rem-calc(14);
       line-height: 1.4;
       vertical-align: top;
       &:hover {
@@ -54,20 +54,6 @@
     }
     @media #{$medium-up} {
       float: right;
-    }
-  }
-}
-.pageLinks {
-  text-align: center;
-  span {
-    background-color: $colorBg;
-    margin: 0 4px;
-    padding: 8px 10px;
-  }
-  a {
-    display: inline-block;
-    line-height: 1;
-    > span {
     }
   }
 }

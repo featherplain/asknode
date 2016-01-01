@@ -20,8 +20,6 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
-			the_post_navigation( '%title', '%title' );
-
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
@@ -29,6 +27,12 @@ get_header(); ?>
 
 		endwhile; // End of the loop.
 		?>
+
+		<?php
+			the_posts_navigation(array(
+			    'prev_text' => '前へ',
+			    'next_text' => '次へ'
+			)); ?>
 
 		</div><!-- /. l-primary -->
 
