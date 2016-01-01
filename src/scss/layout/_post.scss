@@ -4,8 +4,15 @@
 /* post
 /* -------------------------------------------------------------- */
 .post {
+  @extend %clearfix;
   background-color: #fff;
-  padding: 20px;
+  padding: 24px 20px;
+  &--archive {
+    margin: 40px 0;
+    &:nth-of-type(1) {
+      margin-top: 0;
+    }
+  }
   // media qureies
   @media #{$medium-up} {
     padding: 40px;
@@ -15,6 +22,7 @@
   }
   &__image {
     border: 2px solid $colorBg;
+    margin: 20px 0;
     img {
       display: block;
       width: 100%;
@@ -35,11 +43,16 @@
   }
   &__title {
     margin: 20px 0;
-    color: lighten($colorText, 8%);
     font-size: rem-calc(16);
     font-weight: bold;
     &--center {
       text-align: center;
+    }
+    a {
+      color: $colorPinkDarken;
+      &:hover {
+        color: $colorPink;
+      }
     }
   }
   &__separator {

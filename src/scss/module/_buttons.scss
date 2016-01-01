@@ -97,4 +97,12 @@ button {
   &--fullWidth {
     width: 100%;
   }
+  &--more {
+    float: right;
+    font-size: rem-calc(14);
+    &:after {
+      @include genericons($content:'\f429', $fontsize: 18px, $valaign: text-bottom);
+      margin-left: 4px;
+    }
+  }
 }
