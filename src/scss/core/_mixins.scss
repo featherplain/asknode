@@ -232,7 +232,7 @@ $buttonRadius: $baseRadius;
 }
 
 //----------------------------------------------------------------------------
-// common styles
+// styles
 //----------------------------------------------------------------------------
 @mixin bgTriangle() {
   background: url($imgPath + "img_triangle.svg") right top no-repeat $colorPink;
@@ -252,5 +252,22 @@ $buttonRadius: $baseRadius;
   -webkit-font-smoothing: antialiased;
   @media #{$medium-up} {
     font-size: rem-calc(48);
+  }
+}
+
+@mixin overlay($bgColor: rgba(0,0,0,.4), $transition: .3s) {
+  position: relative;
+  z-index: 1;
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bgColor;
+    z-index: 2;
+    transition: $transition;
   }
 }

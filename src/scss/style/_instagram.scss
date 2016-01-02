@@ -4,14 +4,16 @@
 /* instagram
 /* -------------------------------------------------------------- */
 .insta {
-  background-color: #333;
+  background-color: lighten($colorBlack, 4%);
   -webkit-font-smoothing: antialiased;
   &__title {
     margin: 20px 0;
     color: #fff;
     font-family: $fontFamilyEn;
     font-size: rem-calc(14);
+    font-weight: normal;
     letter-spacing: 1.8px;
+    text-align: center;
   }
 }
 /**
@@ -22,13 +24,22 @@
   overflow: scroll;
   &__list {
     @extend %clearfix;
-    width: 1080px;
+    width: 1000px;
     margin: 0;
     padding-left: 0;
+    @media #{$medium-up} {
+      width: 1080px;
+    }
   }
   &__item {
+    @include overlay($bgColor: rgba(0,0,0,.5));
     float: left;
     margin: 0 8px;
+    &:hover {
+      &:after {
+        background-color: transparent;
+      }
+    }
     img {
       width: 100%;
       @media #{$small-only} {
@@ -36,7 +47,7 @@
         height: auto;
       }
       @media #{$medium-up} {
-        max-width: 200px;
+        max-width: 164px;
         height: auto;
       }
     }
