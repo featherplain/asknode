@@ -22,7 +22,7 @@
 	  get_template_part( 'template-parts/modules/instagram' );
 	  ?>
 	  <div class="siteinfo">
-	    <div class="row">
+	  	<div class="siteinfo__inner">
 	      <p class="siteinfo__text siteinfo__text--credit">
 	      	<span>
 	      		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'asknode' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'asknode' ), 'WordPress' ); ?></a>
@@ -35,7 +35,7 @@
 	         <span>Theme by <a href="https://asknode.net/" rel="designer">featherplain</a></span>
 	       </p>
 	      <p class="siteinfo__text siteinfo__text--copy">&copy;&nbsp;<?php echo date( 'Y' ); ?>&nbsp;<?php bloginfo( 'name' ); ?></p>
-	    </div>
+	  	</div>
 	  </div><!-- / .siteinfo -->
 	</footer><!-- / .l-footer -->
 </div><!-- / .l-container -->
