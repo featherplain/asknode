@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------- */
+/* social navigation
+/* -------------------------------------------------------------- */
+.socialNav {
+  background-color: $colorBlack;
+  @media #{$medium-up} {
+    float: right;
+  }
+}
+.socialMenu {
+  @media #{$medium-up} {
+    padding: 0;
+  }
+  >li {
+    display: inline-block;
+    float: left;
+    margin-right: 8px;
+    padding: 0;
+    a {
+      display: block;
+      border: 1px solid lighten($colorSub, 20%);
+      border-radius: 50%;
+      color: #fff;
+      line-height: 1;
+      padding: 6px;
+      &:hover {
+        background-color: $colorPink;
+      }
+      &[href*="facebook.com"] {
+        &:before {
+          @include genericons($content: '\f204', $fontsize: 20px);
+        }
+      }
+      &[href*="twitter.com"] {
+        &:before {
+          @include genericons($content: '\f202', $fontsize: 20px);
+        }
+      }
+      &[href*="github.com"] {
+        &:before {
+          @include genericons($content: '\f200', $fontsize: 20px);
+        }
+      }
+      &[href*="wordpress.org"] {
+        &:before {
+          @include genericons($content: '\f205', $fontsize: 20px);
+        }
+      }
+      &[href*="flickr.com"] {
+        &:before {
+          @include genericons($content: '\f211', $fontsize: 20px);
+        }
+      }
+      &[href*="instagram.com"] {
+        &:before {
+          @include genericons($content: '\f215', $fontsize: 20px);
+        }
+      }
+      // front page
+      @extend %linkColorHome;
+    }
+  }
+}

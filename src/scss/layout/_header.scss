@@ -83,9 +83,10 @@
  */
 .gMenu,
 .socialMenu {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
   @extend %clearfix;
+  margin: 0;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
 }
 .gNav {
   @media #{$small-only} {
@@ -122,11 +123,17 @@
   @media #{$medium-up} {
     float: left;
   }
-  &__item {
-    border-top: 1px solid $colorBorder;
+  >li {
+    border-top: $borderStyle;
+    &:last-child {
+      border-bottom: $borderStyle;
+    }
     @media #{$medium-up} {
       float: left;
       border: none;
+      &:last-child {
+        border-bottom: none;
+      }
     }
     >a {
       @extend %menuItem;
@@ -142,25 +149,23 @@
   }
 }
 // sub menu
-.subMenu {
+.sub-menu {
   display: none;
   width: 100%;
-  min-width: 140px;
-  padding-left: 0;
+  min-width: 150px;
   background-color: #fff;
+  padding-left: 1rem;
   @media #{$medium-up} {
     position: absolute;
     top: $headerHeight;
     left: -20px;
     right: 0;
-    margin: 0 auto;
     box-shadow: 0 1px 4px rgba(0,0,0,.2);
+    padding-left: 0;
+    margin: 0 auto;
   }
-  li {
-    border-bottom: 1px solid $colorBorder;
-    &:last-child {
-      border-bottom: none;
-    }
+  > li {
+    border-top: $borderStyle;
     a {
       @extend %menuItem;
       &:hover {
@@ -173,58 +178,13 @@
     }
   }
 }
-// social menu
-.socialMenu {
-  float: left;
-  margin: 0;
-  padding: 0 10px;
-  @media #{$medium-up} {
-    padding: 0;
-  }
-  &__item {
-    display: inline-block;
-    line-height: 1;
-    float: left;
-    margin: 0 4px;
-    padding: 0;
-    a {
-      display: inline-block;
-      padding: $menuPadding 0;
-      line-height: 1;
-      vertical-align: top;
-      color: $colorText;
-      &:hover {
-        color: $colorPink;
-      }
-      &[href*="facebook.com"] {
-        &:before {
-          @include genericons($content: '\f203', $fontsize: 18px);
-        }
-      }
-      &[href*="twitter.com"] {
-        &:before {
-          @include genericons($content: '\f202', $fontsize: 18px);
-        }
-      }
-      &[href*="github.com"] {
-        &:before {
-          @include genericons($content: '\f200', $fontsize: 18px);
-        }
-      }
-      &[href*="wordpress.org"] {
-        &:before {
-          @include genericons($content: '\f205', $fontsize: 18px);
-        }
-      }
-      // front page
-      @extend %linkColorHome;
-    }
-  }
+.menu-item-has-children {
+  position: relative;
 }
 /**
  * buttons for mobile menu trigger
  */
- .btnMenuTrigger {
+.btnMenuTrigger {
   float: right;
   position: absolute;
   top: 14px;
