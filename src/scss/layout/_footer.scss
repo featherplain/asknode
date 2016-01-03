@@ -35,36 +35,30 @@
  * siteinfo
  */
 .siteinfo {
-  padding: 12px 0;
   background-color: $colorBlack;
   font-family: $fontFamilyEn;
   -webkit-font-smoothing: antialiased;
   &__inner {
     @include grid-row();
   }
+  &__col {
+    @include grid-column($columns: 12);
+    margin: 20px 0;
+    @media #{$medium-up} {
+      @include grid-column($columns: 6, $collapse: false, $float: left);
+      text-align: left;
+    }
+  }
+  &__text {
+    color: #fff;
+    font-size: rem-calc(14);
+    margin: 6px 0;
+  }
   a {
     color: #fff;
   }
   svg {
-    margin: 0 10px;
+    margin: 0 6px;
     vertical-align: middle;
-  }
-  &__text {
-    margin: 12px 0;
-    color: #fff;
-    font-size: rem-calc(14);
-    text-align: center;
-    &--credit {
-      @media #{$medium-up} {
-        @include grid-column($columns: 6, $collapse: false, $float: left);
-        text-align: left;
-      }
-    }
-    &--copy {
-      @media #{$medium-up} {
-        @include grid-column($columns: 6, $collapse: false, $float: right);
-        text-align: right;
-      }
-    }
   }
 }

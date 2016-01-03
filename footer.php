@@ -23,19 +23,39 @@
 	  ?>
 	  <div class="siteinfo">
 	  	<div class="siteinfo__inner">
-	      <p class="siteinfo__text siteinfo__text--credit">
-	      	<span>
-	      		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'asknode' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'asknode' ), 'WordPress' ); ?></a>
-	      	</span>
-	      	<i>
-	          <svg role="img" width="4px" height="4px">
-	            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.symbol.svg#icon_circle"></use>
-	          </svg>
-	         </i>
-	         <span>Theme by <a href="https://asknode.net/" rel="designer">featherplain</a></span>
-	       </p>
-	      <p class="siteinfo__text siteinfo__text--copy">&copy;&nbsp;<?php echo date( 'Y' ); ?>&nbsp;<?php bloginfo( 'name' ); ?></p>
-	  	</div>
+	  		<div class="siteinfo__col">
+		      <p class="siteinfo__text">
+		      	<span>
+		      		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'asknode' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'asknode' ), 'WordPress' ); ?></a>
+		      	</span>
+		      	<i>
+		          <svg role="img" width="4px" height="4px">
+		            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.symbol.svg#icon_circle"></use>
+		          </svg>
+		        </i>
+		        <span>Theme by <a href="https://asknode.net/" rel="designer">featherplain</a></span>
+		        <i>
+		          <svg role="img" width="4px" height="4px">
+		            <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.symbol.svg#icon_circle"></use>
+		          </svg>
+		        </i>
+		        <span>&copy;&nbsp;<?php echo date( 'Y' ); ?>&nbsp;<?php bloginfo( 'name' ); ?></span>
+		      </p>
+	  		</div>
+	  		<div class="siteinfo__col">
+				  <nav class="socialNav">
+				  	<?php
+							wp_nav_menu( array(
+								'theme_location' => 'Social Menu',
+								'container'      => false,
+								'items_wrap'     => '<ul id="%1$s" class="socialMenu">%3$s</ul>',
+								'link_before'    => '<span class="readerOnly">',
+								'link_after'     => '</span>',
+							 ) );
+						?>
+				  </nav>
+	  		</div>
+	  	</div><!-- / .siteinfo__inner -->
 	  </div><!-- / .siteinfo -->
 	</footer><!-- / .l-footer -->
 </div><!-- / .l-container -->

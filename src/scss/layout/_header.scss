@@ -182,56 +182,6 @@
   position: relative;
 }
 /**
- * social menu
- */
-.socialMenu {
-  float: left;
-  margin: 0;
-  padding: 0 10px;
-  @media #{$medium-up} {
-    padding: 0;
-  }
-  &__item {
-    display: inline-block;
-    line-height: 1;
-    float: left;
-    margin: 0 4px;
-    padding: 0;
-    a {
-      display: inline-block;
-      padding: $menuPadding 0;
-      line-height: 1;
-      vertical-align: top;
-      color: $colorText;
-      &:hover {
-        color: $colorPink;
-      }
-      &[href*="facebook.com"] {
-        &:before {
-          @include genericons($content: '\f203', $fontsize: 18px);
-        }
-      }
-      &[href*="twitter.com"] {
-        &:before {
-          @include genericons($content: '\f202', $fontsize: 18px);
-        }
-      }
-      &[href*="github.com"] {
-        &:before {
-          @include genericons($content: '\f200', $fontsize: 18px);
-        }
-      }
-      &[href*="wordpress.org"] {
-        &:before {
-          @include genericons($content: '\f205', $fontsize: 18px);
-        }
-      }
-      // front page
-      @extend %linkColorHome;
-    }
-  }
-}
-/**
  * buttons for mobile menu trigger
  */
 .btnMenuTrigger {
