@@ -3,42 +3,68 @@
 /* -------------------------------------------------------------- */
 /* instagram
 /* -------------------------------------------------------------- */
+// specific variables
+$instaImg-sm: 90px;
+$instaImg-md: 200px;
+$instaImg-lg: 260px;
+$instaHeight-sm: $instaImg-sm + 20px;
+$instaHeight-md: $instaImg-md + 20px;
+$instaHeight-lg: $instaImg-lg + 20px;
+
+%instaHeight {
+  height: $instaHeight-sm;
+  overflow: hidden;
+  @media #{$medium-up} {
+    height: $instaHeight-md;
+    }
+  @media #{$large-up} {
+    height: $instaHeight-lg;
+  }
+}
+
 .insta {
-  background-color: #333;
+  width: 100%;
+  background-color: lighten($colorBlack, 4%);
   -webkit-font-smoothing: antialiased;
   &__title {
     margin: 20px 0;
     color: #fff;
     font-family: $fontFamilyEn;
     font-size: rem-calc(14);
+    font-weight: normal;
     letter-spacing: 1.8px;
+    text-align: center;
   }
 }
 /**
  * photos
  */
 .instaPhotos {
-  margin: 20px 0;
-  overflow: scroll;
+  @extend %instaHeight;
   &__list {
     @extend %clearfix;
-    width: 1080px;
-    margin: 0;
-    padding-left: 0;
+    width: 2240px;
+    margin: 0 auto;
+    margin: 10px 0;
   }
   &__item {
+    @include overlay($bgColor: rgba(0,0,0,.5));
     float: left;
-    margin: 0 8px;
-    img {
-      width: 100%;
-      @media #{$small-only} {
-        max-width: 150px;
-        height: auto;
+    &:hover {
+      &:after {
+        background-color: transparent;
       }
-      @media #{$medium-up} {
-        max-width: 200px;
-        height: auto;
-      }
+    }
+  }
+  &__thumb {
+    width: 100%;
+    max-width: $instaImg-sm;
+    height: auto;
+    @media #{$medium-up} {
+      max-width: $instaImg-md;
+    }
+    @media #{$large-up} {
+      max-width: $instaImg-lg;
     }
   }
 }

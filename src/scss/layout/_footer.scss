@@ -39,6 +39,9 @@
   background-color: $colorBlack;
   font-family: $fontFamilyEn;
   -webkit-font-smoothing: antialiased;
+  &__inner {
+    @include grid-row();
+  }
   a {
     color: #fff;
   }
