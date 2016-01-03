@@ -25,13 +25,13 @@
 
         });
         // add button that display child menu items
-        $('#gNav').find('.gMenu__item--has-child > a').after('<button class="btnSlideMenu"></button>');
+        $('#js-nav').find('.menu-item-has-children > a').after('<button class="btnSlideMenu"></button>');
 
         // toggle submenu items.
-        var $dropDownToggle = $('#gNav').find('.btnSlideMenu');
+        var $dropDownToggle = $('#js-nav').find('.btnSlideMenu');
 
         $dropDownToggle.on('click', function(e) {
-          $(this).siblings('.js-dropdown').slideToggle();
+          $(this).siblings('.sub-menu').slideToggle();
         });
       }
     };
@@ -39,17 +39,17 @@
     // pc
     var dropdown = {
       init: function() {
-        var $dropdown = $('.gMenu__item--has-child');
+        var $dropdown = $('.menu-item-has-children');
         var notHover = true;
 
         var action = $(window).width() > 640 ? 'hover' : 'click';
 
         $dropdown.on(action, function() {
           if(notHover) {
-            $(this).find('>.js-dropdown').fadeIn(260);
+            $(this).find('>.sub-menu').fadeIn(260);
             notHover = false;
           } else {
-            $(this).find('>.js-dropdown').fadeOut(260);
+            $(this).find('>.sub-menu').fadeOut(260);
             notHover = true;
           }
         }).bind(this);
