@@ -184,7 +184,7 @@ function asknode_scripts() {
 add_action( 'wp_enqueue_scripts', 'asknode_scripts' );
 
 /**
- * Register Google font 'Montserrat' for asknode.
+ * Register Google font 'Lato' for asknode.
  *
  * @return string
  */
@@ -192,11 +192,11 @@ function asknode_font_url() {
 	$font_url = '';
 	/*
 	 * Translators: If there are characters in your language that are not supported
-	 * by Montserrat, translate this to 'off'. Do not translate into your own language.
+	 * by Lato, translate this to 'off'. Do not translate into your own language.
 	 */
-	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'asknode' ) ) {
+	if ( 'off' !== _x( 'on', 'Lato font: on or off', 'asknode' ) ) {
 		$query_args = array(
-			'family' => urlencode( 'Montserrat:400,700' ),
+			'family' => urlencode( 'Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' ),
 			'subset' => urlencode( 'latin,latin-ext' ),
 		);
 		$font_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
@@ -210,8 +210,8 @@ function asknode_font_url() {
  */
 function asknode_font_scripts() {
 
-	// Montserrat Google font for asknode
-	wp_enqueue_style( 'asknode-montserrat', asknode_font_url(), array(), null );
+	// Lato Google font for asknode
+	wp_enqueue_style( 'asknode-lato', asknode_font_url(), array(), null );
 
 }
 add_action( 'wp_enqueue_scripts', 'asknode_font_scripts' );
