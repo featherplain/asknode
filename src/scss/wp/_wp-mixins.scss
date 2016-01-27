@@ -13,7 +13,6 @@
   }
 }
 @mixin wp-editor-styles {
-
   // <h> tag styles
   // set font-size
   @for $i from 1 through 6 {
@@ -37,13 +36,9 @@
       margin: $editor-h-margin-lg;
     }
   }
-
   p {
     @extend %editorMargin;
   }
-
-  a {}
-
   dl {
     @extend %editorMargin;
     border: $borderStyle;
@@ -59,7 +54,6 @@
       margin-bottom: 24px;
     }
   }
-
   ul, ol {
     @extend %editorMargin;
     li {
@@ -97,7 +91,6 @@
       }
     }
   }
-
   blockquote {
     @extend %editorMargin;
     position: relative;
@@ -118,7 +111,6 @@
       }
     }
   }
-
   pre,
   code,
   var {
@@ -127,21 +119,18 @@
     font-family: $fontFamilyCode;
     font-size: 80%;
   }
-
   code,
   var {
     padding: 2px 4px;
     color: $colorPink;
     line-height: 1;
   }
-
   var {
     font-style: normal;
     &:before {
       content: "$";
     }
   }
-
   pre {
     @extend %editorMargin;
     padding: 20px;
@@ -152,7 +141,6 @@
       padding: 0;
     }
   }
-
   kbd {
     padding: 4px;
     background-color: $colorBlack;
@@ -163,7 +151,6 @@
     font-family: $fontFamilyCode;
     font-size: 80%;
   }
-
   table {
     @extend %editorMargin;
     width: 100%;
@@ -186,7 +173,6 @@
       th {
         font-weight: normal;
         text-align: left;
-
       }
     }
     th,
@@ -195,5 +181,4 @@
       word-wrap: break-all;
     }
   }
-
 }
