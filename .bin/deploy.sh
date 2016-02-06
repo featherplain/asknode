@@ -30,7 +30,7 @@ bower_components
 .DS_store" > .gitignore
 
 eval "$(ssh-agent -s)" # start the ssh agent
-- chmod 600 deploy_key
-- mv deploy_key ~/.ssh/id_rsa
-- git remote add deploy ${DEPLOY_PATH}
-- git push deploy
+chmod 600 deploy_key
+mv deploy_key ~/.ssh/id_rsa
+git remote add deploy ${DEPLOY_PATH}
+git push deploy
