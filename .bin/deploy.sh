@@ -30,6 +30,7 @@ bower_components
 .DS_store" > .gitignore
 
 eval "$(ssh-agent -s)" # start the ssh agent
-chmod 600 .travis/deploy_key.pem # this key should have push access
-ssh-add .travis/deploy_key.pem
-git remote add deploy "${DEPLOY_PATH}"
+- chmod 600 deploy-key
+- mv deploy-key ~/.ssh/id_rsa
+- git remote add deploy ${DEPLOY_PATH}
+- git push deploy
