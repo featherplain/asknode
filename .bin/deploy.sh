@@ -39,5 +39,7 @@ git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:release > /dev/n
 eval "$(ssh-agent -s)" # start the ssh agent
 chmod 600 deploy_key
 mv deploy_key ~/.ssh/id_rsa
-git remote add deploy ${DEPLOY_PATH}
-git push deploy release
+git remote add deploy ${DEPLOY_MIRROR_PATH}
+cd ${DEPLOY_MIRROR_PATH};
+  git fetch;
+  GIT_WORK_TREE=${DEPLOY_PATH} git checkout -f release
