@@ -8,7 +8,6 @@
     "gulp": "gulp",
     "gulp-server": "gulp default --mode server",
     "gulp-init": "bower install; gulp init",
-    "build": "./node_modules/gulp/bin/gulp.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Megumi Hano",
