@@ -16,6 +16,7 @@
 *.out
 *.pid
 *.gz
+*.yml
 
 
 # OS or Editor folders
