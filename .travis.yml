@@ -6,10 +6,6 @@ branches:
   only:
   - master
 
-before_install:
-  - echo -e "Host ${DEPLOY_HOST}\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-  - in deploy_key.enc -out deploy_key -d
-
 script:
   - ls -al style.css
 
