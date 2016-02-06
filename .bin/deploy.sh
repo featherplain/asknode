@@ -34,7 +34,7 @@ git config user.name "featherplain"
 git config user.email "info@featherplain.com"
 git add .
 git commit --quiet -m "Deploy from travis"
-# git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:release > /dev/null 2>&1
+git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:release > /dev/null 2>&1
 
 eval "$(ssh-agent -s)" #start the ssh agent
 chmod 600 .travis/deploy_key.pem # this key should have push access
