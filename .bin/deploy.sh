@@ -37,6 +37,7 @@ git commit --quiet -m "Deploy from travis"
 git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:release > /dev/null 2>&1
 
 ssh -p ${DEPLOY_PORT} ${DEPLOY_USER}@${DEPLOY_HOST}
+yes
 cd ${DEPLOY_MIRROR_PATH};
   git fetch;
   GIT_WORK_TREE=${DEPLOY_PATH} git checkout -f release
