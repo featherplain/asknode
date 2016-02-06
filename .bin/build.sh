@@ -15,18 +15,16 @@ fi
 rm -rf .git
 rm -r .gitignore
 
-echo ".bowerrc
-.editorconfig
+echo ".editorconfig
 .travis.yml
 README.md
-bin
+.bin
 bower.json
 gulpfile.js
 node_modules
 package.json
-tests
-tmp
 src
 README.md
 setting.json
-bower_components" > .gitignore
+bower_components
+.DS_store" > .gitignore

@@ -1,13 +1,14 @@
 {
-  "name": "project-starter",
-  "version": "0.4.0",
-  "description": "Project starter for web development with gulp + foundation",
-  "uri": "https://github.com/featherplain/project-starter",
+  "name": "asknode",
+  "version": "",
+  "description": "WordPress original theme for asknode.net",
+  "uri": "https://github.com/featherplain/asknode",
   "main": "gulpfile.js",
   "scripts": {
     "gulp": "gulp",
     "gulp-server": "gulp default --mode server",
     "gulp-init": "bower install; gulp init",
+    "build": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Megumi Hano",

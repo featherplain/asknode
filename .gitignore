@@ -16,7 +16,6 @@
 *.out
 *.pid
 *.gz
-*.yml
 
 
 # OS or Editor folders
@@ -32,6 +31,7 @@ nbproject
 .sublime-project
 .sublime-workspace
 .csscomb.json
+deploy_key
 
 # Folders to ignore
 .hg
